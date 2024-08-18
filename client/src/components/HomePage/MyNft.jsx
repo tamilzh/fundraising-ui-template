@@ -19,6 +19,7 @@ import error from "../../config/error.json";
 import Error from "../Modal/Error";
 import ShareModal from "../Modal/ShareModal";
 import { useOutletContext } from "react-router-dom";
+import { BASE_API } from "../../utils/services";
 
 const MyNft = () => {
   //const [nftData, setNftData] = useState(nft);
@@ -56,7 +57,7 @@ const MyNft = () => {
   //Download
   const downloadImage = (card) => {
     logInfo(card);
-    fetch(`/download`, {
+    fetch(`${BASE_API}/download`, {
       method: "POST",
       headers: {
         "Content-type": "application/json",

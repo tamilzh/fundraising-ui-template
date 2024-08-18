@@ -1,14 +1,15 @@
 import { logInfo } from "./log";
 
+export const BASE_API = process.env.API
 const getConstants = async () => {
-  const response = await fetch(`/constants`);
+  const response = await fetch(`${BASE_API}/constants`);
   const data = await response.json();
   return data;
 };
 
 const getBackgrounds = async (artCreationPackId) => {
   const response = await fetch(
-    `/artCreationPack/${artCreationPackId}/backgrounds`
+    `${BASE_API}/artCreationPack/${artCreationPackId}/backgrounds`
   );
   const data = await response.json();
   return data;
@@ -16,7 +17,7 @@ const getBackgrounds = async (artCreationPackId) => {
 
 const getPatterns = async (artCreationPackId) => {
   const response = await fetch(
-    `/artCreationPack/${artCreationPackId}/patterns`
+    `${BASE_API}/artCreationPack/${artCreationPackId}/patterns`
   );
   const data = await response.json();
   return data;
@@ -24,7 +25,7 @@ const getPatterns = async (artCreationPackId) => {
 
 const getLayers = async (artCreationPackId, patternId) => {
   const response = await fetch(
-    `/artCreationPack/${artCreationPackId}/pattern/${patternId}/layers`
+    `${BASE_API}/artCreationPack/${artCreationPackId}/pattern/${patternId}/layers`
   );
   const data = await response.json();
   return data;
@@ -32,7 +33,7 @@ const getLayers = async (artCreationPackId, patternId) => {
 
 const getLayerChoices = async (artCreationPackId, patternId, layerId) => {
   const response = await fetch(
-    `/artCreationPack/${artCreationPackId}/pattern/${patternId}/layer/${layerId}/layerchoices`
+    `${BASE_API}/artCreationPack/${artCreationPackId}/pattern/${patternId}/layer/${layerId}/layerchoices`
   );
   const data = await response.json();
   return data;
@@ -40,38 +41,38 @@ const getLayerChoices = async (artCreationPackId, patternId, layerId) => {
 
 const getApprovedNames = async (artCreationPackId) => {
   const response = await fetch(
-    `/artCreationPack/${artCreationPackId}/approvednames`
+    `${BASE_API}/artCreationPack/${artCreationPackId}/approvednames`
   );
   const data = await response.json();
   return data;
 };
 
 const getPresetDistribution = async (siteId) => {
-  const response = await fetch(`/site/${siteId}/presetdistribution`);
+  const response = await fetch(`${BASE_API}/site/${siteId}/presetdistribution`);
   const data = await response.json();
   return data;
 };
 
 const getRarityList = async (siteId) => {
-  const response = await fetch(`/site/${siteId}/raritydetails`);
+  const response = await fetch(`${BASE_API}/site/${siteId}/raritydetails`);
   const data = await response.json();
   return data;
 };
 
 const isApproved = async () => {
-  const response = await fetch(`/site/approved`);
+  const response = await fetch(`${BASE_API}/site/approved`);
   const data = await response.json();
   return data;
 };
 
 const getSite = async () => {
-  const response = await fetch(`/site`);
+  const response = await fetch(`${BASE_API}/site`);
   const data = await response.json();
   return data;
 };
 
 const getSiteDistribution = async (siteDetails) => {
-  const response = await fetch(`/site/distribution`, {
+  const response = await fetch(`${BASE_API}/site/distribution`, {
     method: "POST",
     headers: {
       "Content-type": "application/json",
@@ -84,7 +85,7 @@ const getSiteDistribution = async (siteDetails) => {
 
 const getFilterData = async (siteDetails) => {
   const response = await fetch(
-    `/artCreationPack/${siteDetails.artCreationPackId}/getfilterData`
+    `${BASE_API}/artCreationPack/${siteDetails.artCreationPackId}/getfilterData`
   );
   const data = await response.json();
   return data;
@@ -97,7 +98,7 @@ const getBuyNFT = (walletAddress, page, limit) => {
   const promise = new Promise(async (resolve) => {
     try {
       const response = await fetch(
-        `/fundraisin/buy-nft/${walletAddress}${pagination}`,
+        `${BASE_API}/fundraisin/buy-nft/${walletAddress}${pagination}`,
         {
           method: "get",
           signal,
@@ -120,7 +121,7 @@ const getPreviewImage = (body) => {
   const signal = controller.signal;
   const promise = new Promise(async (resolve, reject) => {
     try {
-      const response = await fetch(`/preview`, {
+      const response = await fetch(`${BASE_API}/preview`, {
         method: "POST",
         body: JSON.stringify(body),
         headers: {
@@ -142,19 +143,19 @@ const getPreviewImage = (body) => {
 };
 
 const getTokenOwner = async (tokenId) => {
-  const response = await fetch(`/fundraisin/token/${tokenId}/owner`);
+  const response = await fetch(`${BASE_API}/fundraisin/token/${tokenId}/owner`);
   const data = await response.text();
   return data;
 };
 
 const getTopFundraiser = async (walletAddress) => {
-  const response = await fetch(`/fundraisin/top-nft/${walletAddress}`);
+  const response = await fetch(`${BASE_API}/fundraisin/top-nft/${walletAddress}`);
   const data = await response.json();
   return data;
 };
 
 const getMyNFT = async (walletAddress) => {
-  const response = await fetch(`/fundraisin/my-nft/${walletAddress}`);
+  const response = await fetch(`${BASE_API}/fundraisin/my-nft/${walletAddress}`);
   const data = await response.json();
   return data;
 };

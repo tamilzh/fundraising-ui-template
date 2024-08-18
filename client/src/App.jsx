@@ -21,6 +21,7 @@ import {
   getBuyNFT,
   getFilterData,
   getTotalMinted,
+  BASE_API,
 } from "./utils/services";
 import "./index.css";
 
@@ -43,7 +44,7 @@ const App = () => {
   const [query, setQuery] = useState();
   const previewFile = false;
   const getNetwork = async () => {
-    const response = await fetch("/network");
+    const response = await fetch(`${BASE_API}/network`);
     const network = await response.json();
     return network;
   };

@@ -9,6 +9,7 @@ import { useParams } from "react-router-dom";
 import Spinner from "../Spinner";
 import logo from "../../assets/images/logo.svg";
 import "./index.css";
+import { BASE_API } from "../../utils/services";
 
 function Widget(props) {
   const { type } = useParams();
@@ -21,7 +22,7 @@ function Widget(props) {
   const link = process.env.REACT_APP_WEBSITE_LINK;
   const fundraisin_link = process.env.REACT_APP_FUNDRAISIN_WEBSITE_LINK;
   const getNetwork = async () => {
-    const response = await fetch("/network");
+    const response = await fetch(`${BASE_API}/network`);
     const network = await response.json();
     return network;
   };
@@ -38,10 +39,10 @@ function Widget(props) {
     const loadWidget = async () => {
       const network = await getNetwork();
       setMode(network.mode)
-      const queryUSD = await fetch(`/avax-to-usd`);
+      const queryUSD = await fetch(`${BASE_API}/avax-to-usd`);
       const getUSD = await queryUSD.json();
       setUSD(getUSD?.usd || 0);
-      const res = await fetch(`/fundraisin/funds-raised/${type}`);
+      const res = await fetch(`${BASE_API}/fundraisin/funds-raised/${type}`);
       const data = await res.json();
       setNftData(data.nft);
       setTotalFunded(data.totalValueFunded);

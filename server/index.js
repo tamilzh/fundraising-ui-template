@@ -16,6 +16,10 @@ const __dirname = url.fileURLToPath(new URL("..", import.meta.url));
 const PORT = process.env.PORT || 8080;
 const app = express();
 
+app.use("/", (req, res) => {
+  res.send("server is  running");
+});
+/*
 app.use(cors());
 app.use(bodyParser.json({ limit: "50mb" }));
 app.use(bodyParser.urlencoded({ limit: "50mb", extended: true }));
@@ -41,7 +45,7 @@ app.get("/constants", async (req, res) => {
     NETWORK_URL: process.env.NETWORK_URL
   });
 });
-
+*/
 
 app.listen(PORT, async () => {
   console.log(`${process.env.NODE_ENV} server listening on ${PORT}`);

@@ -6,7 +6,18 @@
     "main": "index.js",
     "type": "module",
     "scripts": {
-        "start": "node server/index.js"        
+        "startServer": "NODE_ENV=production forever start server/index.js",
+        "start": "node --experimental-json-modules server/index.js",
+        "build": "cd client && npm install && npm run build",
+        "build:development": "cd client && npm install && npm run build:development",
+        "build:staging": "cd client && npm install && npm run build:staging",
+        "build-number": "node generate-build.js",
+        "deploy": "gcloud config set project catdrop-prod && node generate-build.js && npm run build && gcloud app deploy",
+        "deploy:development": "gcloud config set project catdrop-develop && node generate-build.js && npm run build:development && gcloud app deploy app.development.yaml",
+        "deploy:staging": "gcloud config set project catdrop-staging && node generate-build.js && npm run build:staging && gcloud app deploy app.staging.yaml",
+        "dev": "nodemon --experimental-json-modules server/index.js",
+        "commitlint": "husky install && husky add .husky/commit-msg \"npx --no -- commitlint  --config commitlint.config.cjs --edit $1\"",
+        "vercel-build": "npm run build"
     },
     "engines": {
         "node": "20.16.0"
@@ -27,10 +38,10 @@
         "moment": "^2.29.4",
         "nodemon": "^2.0.20",
         "nsql-cache": "^1.1.5",
+        "nsql-cache-datastore": "^1.1.6",
         "request": "^2.88.2",
         "sharp": "^0.30.7",
-        "uuid": "^8.3.2",
-        "nsql-cache-datastore": "^1.1.6"
+        "uuid": "^8.3.2"
     },
     "devDependencies": {
         "@commitlint/cli": "^17.0.3",

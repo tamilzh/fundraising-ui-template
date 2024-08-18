@@ -2,6 +2,7 @@ import React, { useEffect, useLayoutEffect, useState } from "react";
 import constant from "../utils/constant";
 import ReactMarkdown from "react-markdown";
 import Faq from "../md/Faqs.md";
+import { BASE_API } from "../utils/services";
 
 const Faqs = () => {
   const [build, setBuild] = useState({});
@@ -31,7 +32,7 @@ const Faqs = () => {
         setMD(text);
       });
     const getBuildInfo = async () => {
-      let response = await fetch("/build");
+      let response = await fetch(`${BASE_API}/build`);
       let buildInfo = await response.json();
       setBuild(buildInfo);
     };

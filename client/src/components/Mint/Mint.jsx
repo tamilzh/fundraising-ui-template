@@ -28,6 +28,7 @@ import {
   getRarityList,
   isApproved,
   getPreviewImage,
+  BASE_API,
 } from "../../utils/services";
 import constant from "../../utils/constant";
 import { v4 as uuidv4 } from "uuid";
@@ -419,7 +420,7 @@ const Mint = () => {
       setLoading(true);
       const _metadata = constructMintData();
       e.target.disabled = true;
-      fetch(`/upload`, {
+      fetch(`${BASE_API}/upload`, {
         method: "POST",
         headers: {
           "Content-type": "application/json",
