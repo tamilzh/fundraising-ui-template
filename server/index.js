@@ -26,7 +26,7 @@ app.use(bodyParser.urlencoded({ limit: "50mb", extended: true }));
 
 */
 app.get("/health", function (req, res) {
-  res.send("Welcome to Fund Raisin App");
+  res.send(process.env);
 });
 
 app.use(network);
