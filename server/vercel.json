@@ -1,12 +1,14 @@
 {
   "version": 2,
+  "build": {
+    "env": {
+      "REACT_APP_VERSION": "1.0"
+    }
+  },
   "builds": [
     {
       "src": "index.js",
-      "use": "@vercel/node",
-      "env": {
-      "REACT_APP_VERSIONTAMIL": "1.0"
-    }
+      "use": "@vercel/node"
     }
   ],
   "routes": [
