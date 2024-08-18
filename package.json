@@ -38,11 +38,8 @@
         "moment": "^2.29.4",
         "nodemon": "^2.0.20",
         "nsql-cache": "^1.1.5",
-        "nsql-cache-datastore": "^1.1.6",
-        "react-device-detect": "^2.2.2",
         "request": "^2.88.2",
         "sharp": "^0.30.7",
-        "slick-carousel": "^1.8.1",
         "uuid": "^8.3.2"
     },
     "devDependencies": {
