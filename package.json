@@ -16,7 +16,8 @@
         "deploy:development": "gcloud config set project catdrop-develop && node generate-build.js && npm run build:development && gcloud app deploy app.development.yaml",
         "deploy:staging": "gcloud config set project catdrop-staging && node generate-build.js && npm run build:staging && gcloud app deploy app.staging.yaml",
         "dev": "nodemon --experimental-json-modules server/index.js",
-        "commitlint": "husky install && husky add .husky/commit-msg \"npx --no -- commitlint  --config commitlint.config.cjs --edit $1\""
+        "commitlint": "husky install && husky add .husky/commit-msg \"npx --no -- commitlint  --config commitlint.config.cjs --edit $1\"",
+        "vercel-build": "npm run build"
     },
     "engines": {
         "node": "16.16.0"
