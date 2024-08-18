@@ -41,7 +41,6 @@
         "nsql-cache": "^1.1.5",
         "nsql-cache-datastore": "^1.1.6",
         "react-device-detect": "^2.2.2",
-        "react-slick": "^0.29.0",
         "request": "^2.88.2",
         "sharp": "^0.30.7",
         "slick-carousel": "^1.8.1",
