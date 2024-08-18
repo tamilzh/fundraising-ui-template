@@ -1,7 +1,7 @@
 import "./dotent-config.js";
-import path from "path";
-import * as url from "url";
 import express from "express";
+/*import path from "path";
+import * as url from "url";
 import bodyParser from "body-parser";
 import cors from "cors";
 import artAPI from "./api/artist.js";
@@ -13,7 +13,7 @@ import network from "./api/network.js";
 
 const __dirname = url.fileURLToPath(new URL("..", import.meta.url));
 
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 8080; */
 const app = express();
 
 app.use("/", (req, res) => {
@@ -47,6 +47,6 @@ app.get("/constants", async (req, res) => {
 });
 */
 
-app.listen(PORT, async () => {
-  console.log(`${process.env.NODE_ENV} server listening on ${PORT}`);
+app.listen(5000, async () => {
+  console.log(`${process.env.NODE_ENV} server listening on ${5000}`);
 });
