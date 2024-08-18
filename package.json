@@ -6,18 +6,7 @@
     "main": "index.js",
     "type": "module",
     "scripts": {
-        "startServer": "NODE_ENV=production forever start server/index.js",
-        "start": "node --experimental-json-modules server/index.js",
-        "build": "cd client && npm install && npm run build",
-        "build:development": "cd client && npm install && npm run build:development",
-        "build:staging": "cd client && npm install && npm run build:staging",
-        "build-number": "node generate-build.js",
-        "deploy": "gcloud config set project catdrop-prod && node generate-build.js && npm run build && gcloud app deploy",
-        "deploy:development": "gcloud config set project catdrop-develop && node generate-build.js && npm run build:development && gcloud app deploy app.development.yaml",
-        "deploy:staging": "gcloud config set project catdrop-staging && node generate-build.js && npm run build:staging && gcloud app deploy app.staging.yaml",
-        "dev": "nodemon --experimental-json-modules server/index.js",
-        "commitlint": "husky install && husky add .husky/commit-msg \"npx --no -- commitlint  --config commitlint.config.cjs --edit $1\"",
-        "vercel-build": "npm run build"
+        "start": "nodemon --experimental-json-modules server/index.js"
     },
     "engines": {
         "node": "20.16.0"
