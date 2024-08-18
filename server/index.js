@@ -19,7 +19,7 @@ const app = express();
 app.use("/", (req, res) => {
   res.send("server is  running");
 });
-/*
+
 app.use(cors());
 app.use(bodyParser.json({ limit: "50mb" }));
 app.use(bodyParser.urlencoded({ limit: "50mb", extended: true }));
@@ -27,7 +27,7 @@ app.use(bodyParser.urlencoded({ limit: "50mb", extended: true }));
 app.get("/health", function (req, res) {
   res.send("Welcome to Fund Raisin App");
 });
-
+/*
 app.use("/site", siteAPI);
 app.use("/artCreationPack", artAPI);
 app.use("/fundraisin", fundraisinAPI);
