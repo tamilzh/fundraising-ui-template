@@ -19,6 +19,8 @@ Open a new terminal
 2. Run `npm install`
 3. Run `npm run dev`
 
+Open browser and browse `http://localhost:8080`
+
 # To start client
 
 Open a new terminal
