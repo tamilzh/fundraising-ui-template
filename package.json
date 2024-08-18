@@ -29,7 +29,8 @@
         "nsql-cache": "^1.1.5",
         "request": "^2.88.2",
         "sharp": "^0.30.7",
-        "uuid": "^8.3.2"
+        "uuid": "^8.3.2",
+        "nsql-cache-datastore": "^1.1.6"
     },
     "devDependencies": {
         "@commitlint/cli": "^17.0.3",
