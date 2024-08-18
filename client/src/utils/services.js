@@ -1,6 +1,6 @@
 import { logInfo } from "./log";
 
-export const BASE_API = 'https://fundraising-ui-template.vercel.app/'
+export const BASE_API = 'https://fundraising-ui-template.vercel.app'
 const getConstants = async () => {
   const response = await fetch(`${BASE_API}/constants`);
   const data = await response.json();
