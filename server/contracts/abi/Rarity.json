@@ -1,0 +1,287 @@
+{
+    "contractName": "Rarity",
+    "address": "0xfC6d519a6c653495fc11d71828723f0F2b30A809",
+    "version": "0.9.1",
+    "abi": [
+        {
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "_campaignId",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "string",
+                    "name": "_rarityType",
+                    "type": "string"
+                }
+            ],
+            "name": "getCampaignRarityByType",
+            "outputs": [
+                {
+                    "internalType": "uint256[]",
+                    "name": "",
+                    "type": "uint256[]"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "campaignId",
+                    "type": "uint256"
+                }
+            ],
+            "name": "getRarityByCampaign",
+            "outputs": [
+                {
+                    "components": [
+                        {
+                            "internalType": "uint256",
+                            "name": "rarityId",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "campaignId",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "string",
+                            "name": "rarityType",
+                            "type": "string"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "idOfType",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "startsOn",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "endsOn",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "maxCount",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "currentCount",
+                            "type": "uint256"
+                        }
+                    ],
+                    "internalType": "struct Rarity.RarityObj[]",
+                    "name": "",
+                    "type": "tuple[]"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "_campaignId",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "string",
+                    "name": "_rarityType",
+                    "type": "string"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "_idOfType",
+                    "type": "uint256"
+                }
+            ],
+            "name": "increamentCurrentCounter",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "name": "initialize",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "_campaignId",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "string",
+                    "name": "_rarityType",
+                    "type": "string"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "_idOfType",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "_startsOn",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "_endsOn",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "_maxCount",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "_currentCount",
+                    "type": "uint256"
+                }
+            ],
+            "name": "insertOrUpdateRarity",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "_campaignId",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "string",
+                    "name": "_rarityType",
+                    "type": "string"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "_idOfType",
+                    "type": "uint256"
+                }
+            ],
+            "name": "isRarityRestricted",
+            "outputs": [
+                {
+                    "internalType": "bool",
+                    "name": "",
+                    "type": "bool"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "name": "rarityCounter",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "name": "rarityList",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "rarityId",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "campaignId",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "string",
+                    "name": "rarityType",
+                    "type": "string"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "idOfType",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "startsOn",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "endsOn",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "maxCount",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "currentCount",
+                    "type": "uint256"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "_id",
+                    "type": "uint256"
+                }
+            ],
+            "name": "removeRarity",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "address",
+                    "name": "_campaignAddress",
+                    "type": "address"
+                }
+            ],
+            "name": "updateCampaignContractAddress",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        }
+    ]
+}

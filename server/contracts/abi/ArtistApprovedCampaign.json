@@ -1,0 +1,1725 @@
+{
+    "contractName": "ArtistApprovedCampaign",
+    "address": "0x70aFCA14142272dEc97570dE18139Ad8fa34A7e7",
+    "version": "0.9.1",
+    "abi": [
+        {
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "_campaignId",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "_minArtistPercentage",
+                    "type": "uint256"
+                }
+            ],
+            "name": "approveCampaign",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "name": "approvedNameCounter",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "name": "approvedNameList",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "approvedNameId",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "string",
+                    "name": "approvedName",
+                    "type": "string"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "artPackId",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "nextNameNumber",
+                    "type": "uint256"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "name": "artPackCounter",
+            "outputs": [
+                {
+                    "internalType": "uint128",
+                    "name": "",
+                    "type": "uint128"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "name": "artPackList",
+            "outputs": [
+                {
+                    "internalType": "uint128",
+                    "name": "artPackId",
+                    "type": "uint128"
+                },
+                {
+                    "internalType": "string",
+                    "name": "artPackName",
+                    "type": "string"
+                },
+                {
+                    "internalType": "uint128",
+                    "name": "artistId",
+                    "type": "uint128"
+                },
+                {
+                    "internalType": "string",
+                    "name": "copyrightNoticeURL",
+                    "type": "string"
+                },
+                {
+                    "internalType": "string",
+                    "name": "previewURL",
+                    "type": "string"
+                },
+                {
+                    "internalType": "bool",
+                    "name": "availableForCampaigns",
+                    "type": "bool"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "name": "artistCampaignCounter",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "name": "artistCampaignList",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "artistApprovedCampaignId",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "campaignId",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "artPackId",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "minArtistPercentage",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "bool",
+                    "name": "approved",
+                    "type": "bool"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "name": "artistCounter",
+            "outputs": [
+                {
+                    "internalType": "uint128",
+                    "name": "",
+                    "type": "uint128"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "name": "artistList",
+            "outputs": [
+                {
+                    "internalType": "uint128",
+                    "name": "artistId",
+                    "type": "uint128"
+                },
+                {
+                    "internalType": "string",
+                    "name": "artistName",
+                    "type": "string"
+                },
+                {
+                    "internalType": "string",
+                    "name": "artistEmail",
+                    "type": "string"
+                },
+                {
+                    "internalType": "address payable",
+                    "name": "artistAddress",
+                    "type": "address"
+                },
+                {
+                    "internalType": "address",
+                    "name": "owner",
+                    "type": "address"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "name": "backgroundCounter",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "name": "backgroundList",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "backgroundId",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "string",
+                    "name": "colorHexCode",
+                    "type": "string"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "artPackId",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint128",
+                    "name": "rank",
+                    "type": "uint128"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "_artPackId",
+                    "type": "uint256"
+                }
+            ],
+            "name": "cloneArt",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "name": "deleteApprovedName",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "name": "deleteArtPack",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "name": "deleteArtist",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "name": "deleteBackground",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "name": "deleteLayer",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "name": "deleteLayerChoice",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "name": "deleteLayerClass",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "name": "deleteLayerClassStyle",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "name": "deletePattern",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "_artPackId",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "bool",
+                    "name": "status",
+                    "type": "bool"
+                }
+            ],
+            "name": "getApprovalObj",
+            "outputs": [
+                {
+                    "components": [
+                        {
+                            "internalType": "uint256",
+                            "name": "artistApprovedCampaignId",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "campaignId",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "artPackId",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "minArtistPercentage",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "bool",
+                            "name": "approved",
+                            "type": "bool"
+                        }
+                    ],
+                    "internalType": "struct ArtistApprovedCampaign.ArtistApprovedCampaignObj",
+                    "name": "",
+                    "type": "tuple"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "_campaignId",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "_artPackId",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "bool",
+                    "name": "showAll",
+                    "type": "bool"
+                }
+            ],
+            "name": "getApprovedName",
+            "outputs": [
+                {
+                    "components": [
+                        {
+                            "internalType": "uint256",
+                            "name": "approvedNameId",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "string",
+                            "name": "approvedName",
+                            "type": "string"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "artPackId",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "nextNameNumber",
+                            "type": "uint256"
+                        }
+                    ],
+                    "internalType": "struct ApprovedName.ApprovedNameObj[]",
+                    "name": "",
+                    "type": "tuple[]"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "uint128",
+                    "name": "_artistId",
+                    "type": "uint128"
+                }
+            ],
+            "name": "getArtPackListByArtist",
+            "outputs": [
+                {
+                    "components": [
+                        {
+                            "internalType": "uint128",
+                            "name": "artPackId",
+                            "type": "uint128"
+                        },
+                        {
+                            "internalType": "string",
+                            "name": "artPackName",
+                            "type": "string"
+                        },
+                        {
+                            "internalType": "uint128",
+                            "name": "artistId",
+                            "type": "uint128"
+                        },
+                        {
+                            "internalType": "string",
+                            "name": "copyrightNoticeURL",
+                            "type": "string"
+                        },
+                        {
+                            "internalType": "string",
+                            "name": "previewURL",
+                            "type": "string"
+                        },
+                        {
+                            "internalType": "bool",
+                            "name": "availableForCampaigns",
+                            "type": "bool"
+                        }
+                    ],
+                    "internalType": "struct ArtPack.ArtPackObj[]",
+                    "name": "",
+                    "type": "tuple[]"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "address",
+                    "name": "_address",
+                    "type": "address"
+                }
+            ],
+            "name": "getArtistByAddress",
+            "outputs": [
+                {
+                    "internalType": "uint128",
+                    "name": "",
+                    "type": "uint128"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "_artPackId",
+                    "type": "uint256"
+                }
+            ],
+            "name": "getArtistOwner",
+            "outputs": [
+                {
+                    "internalType": "address",
+                    "name": "",
+                    "type": "address"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "_artPackId",
+                    "type": "uint256"
+                }
+            ],
+            "name": "getArtistWallet",
+            "outputs": [
+                {
+                    "internalType": "address",
+                    "name": "",
+                    "type": "address"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "_campaignId",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "_artPackId",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "bool",
+                    "name": "showAll",
+                    "type": "bool"
+                }
+            ],
+            "name": "getBackgroundColor",
+            "outputs": [
+                {
+                    "components": [
+                        {
+                            "internalType": "uint256",
+                            "name": "backgroundId",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "string",
+                            "name": "colorHexCode",
+                            "type": "string"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "artPackId",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "uint128",
+                            "name": "rank",
+                            "type": "uint128"
+                        }
+                    ],
+                    "internalType": "struct Background.BackgroundObj[]",
+                    "name": "",
+                    "type": "tuple[]"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "_artPackId",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "string",
+                    "name": "_colorHexCode",
+                    "type": "string"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "mode",
+                    "type": "uint256"
+                }
+            ],
+            "name": "getBackgroundRankByArtPackId",
+            "outputs": [
+                {
+                    "internalType": "uint256[]",
+                    "name": "",
+                    "type": "uint256[]"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "_campaignId",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "_patternId",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "bool",
+                    "name": "showAll",
+                    "type": "bool"
+                }
+            ],
+            "name": "getLayer",
+            "outputs": [
+                {
+                    "components": [
+                        {
+                            "internalType": "uint256",
+                            "name": "layerId",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "string",
+                            "name": "layerName",
+                            "type": "string"
+                        },
+                        {
+                            "internalType": "string",
+                            "name": "layerDepth",
+                            "type": "string"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "patternId",
+                            "type": "uint256"
+                        }
+                    ],
+                    "internalType": "struct Layer.LayerObj[]",
+                    "name": "",
+                    "type": "tuple[]"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "_patternId",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint256[]",
+                    "name": "rarityExclude",
+                    "type": "uint256[]"
+                }
+            ],
+            "name": "getLayerByPatternId",
+            "outputs": [
+                {
+                    "components": [
+                        {
+                            "internalType": "uint256",
+                            "name": "layerId",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "string",
+                            "name": "layerName",
+                            "type": "string"
+                        },
+                        {
+                            "internalType": "string",
+                            "name": "layerDepth",
+                            "type": "string"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "patternId",
+                            "type": "uint256"
+                        }
+                    ],
+                    "internalType": "struct Layer.LayerObj[]",
+                    "name": "",
+                    "type": "tuple[]"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "_campaignId",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "_layerId",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "bool",
+                    "name": "showAll",
+                    "type": "bool"
+                }
+            ],
+            "name": "getLayerChoice",
+            "outputs": [
+                {
+                    "components": [
+                        {
+                            "internalType": "uint256",
+                            "name": "layerChoiceId",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "string",
+                            "name": "layerURL",
+                            "type": "string"
+                        },
+                        {
+                            "internalType": "string",
+                            "name": "layerPreviewURL",
+                            "type": "string"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "layerId",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "order",
+                            "type": "uint256"
+                        }
+                    ],
+                    "internalType": "struct LayerChoice.LayerChoiceObj[]",
+                    "name": "",
+                    "type": "tuple[]"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "_layerId",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint256[]",
+                    "name": "rarityExclude",
+                    "type": "uint256[]"
+                }
+            ],
+            "name": "getLayerChoiceByLayerId",
+            "outputs": [
+                {
+                    "components": [
+                        {
+                            "internalType": "uint256",
+                            "name": "layerChoiceId",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "string",
+                            "name": "layerURL",
+                            "type": "string"
+                        },
+                        {
+                            "internalType": "string",
+                            "name": "layerPreviewURL",
+                            "type": "string"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "layerId",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "order",
+                            "type": "uint256"
+                        }
+                    ],
+                    "internalType": "struct LayerChoice.LayerChoiceObj[]",
+                    "name": "",
+                    "type": "tuple[]"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "_campaignId",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "_layerChoiceId",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "bool",
+                    "name": "showAll",
+                    "type": "bool"
+                }
+            ],
+            "name": "getLayerClass",
+            "outputs": [
+                {
+                    "components": [
+                        {
+                            "internalType": "uint256",
+                            "name": "layerClassId",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "string",
+                            "name": "layerClassName",
+                            "type": "string"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "layerChoiceId",
+                            "type": "uint256"
+                        }
+                    ],
+                    "internalType": "struct LayerChoiceClass.LayerClassObj[]",
+                    "name": "",
+                    "type": "tuple[]"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "_campaignId",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "_layerClassId",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "bool",
+                    "name": "showAll",
+                    "type": "bool"
+                }
+            ],
+            "name": "getLayerStyleColor",
+            "outputs": [
+                {
+                    "components": [
+                        {
+                            "internalType": "uint256",
+                            "name": "layerStyleColorId",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "string",
+                            "name": "fillHexCode",
+                            "type": "string"
+                        },
+                        {
+                            "internalType": "string",
+                            "name": "transparancy",
+                            "type": "string"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "layerClassId",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "string",
+                            "name": "strokeHexCode",
+                            "type": "string"
+                        }
+                    ],
+                    "internalType": "struct LayerChoiceStyleColor.LayerStyleColorObj[]",
+                    "name": "",
+                    "type": "tuple[]"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "_campaignId",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "_artPackId",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "bool",
+                    "name": "showAll",
+                    "type": "bool"
+                }
+            ],
+            "name": "getPattern",
+            "outputs": [
+                {
+                    "components": [
+                        {
+                            "internalType": "uint256",
+                            "name": "patternId",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "string",
+                            "name": "patternName",
+                            "type": "string"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "artPackId",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "string",
+                            "name": "thumbnailURL",
+                            "type": "string"
+                        },
+                        {
+                            "internalType": "string",
+                            "name": "patternURL",
+                            "type": "string"
+                        }
+                    ],
+                    "internalType": "struct Pattern.PatternObj[]",
+                    "name": "",
+                    "type": "tuple[]"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "_campaignId",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "string",
+                    "name": "_rarityType",
+                    "type": "string"
+                }
+            ],
+            "name": "getRarityList",
+            "outputs": [
+                {
+                    "internalType": "uint256[]",
+                    "name": "",
+                    "type": "uint256[]"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "_campaignId",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "string",
+                    "name": "_rarityType",
+                    "type": "string"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "_idOfType",
+                    "type": "uint256"
+                }
+            ],
+            "name": "increamentCurrentCounter",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "name": "initArtist",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "address",
+                    "name": "_rarityContractAddress",
+                    "type": "address"
+                }
+            ],
+            "name": "initialize",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "_artPackId",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "string",
+                    "name": "_name",
+                    "type": "string"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "_nextNameNumber",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "_id",
+                    "type": "uint256"
+                }
+            ],
+            "name": "insertOrUpdateApprovedName",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "uint128",
+                    "name": "_artistId",
+                    "type": "uint128"
+                },
+                {
+                    "internalType": "string",
+                    "name": "_name",
+                    "type": "string"
+                },
+                {
+                    "internalType": "string",
+                    "name": "_copyrightURL",
+                    "type": "string"
+                },
+                {
+                    "internalType": "string",
+                    "name": "_previewURL",
+                    "type": "string"
+                },
+                {
+                    "internalType": "bool",
+                    "name": "_availableForCampaigns",
+                    "type": "bool"
+                },
+                {
+                    "internalType": "uint128",
+                    "name": "_id",
+                    "type": "uint128"
+                }
+            ],
+            "name": "insertOrUpdateArtPack",
+            "outputs": [
+                {
+                    "internalType": "uint128",
+                    "name": "",
+                    "type": "uint128"
+                }
+            ],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "string",
+                    "name": "_name",
+                    "type": "string"
+                },
+                {
+                    "internalType": "address",
+                    "name": "_walletAddress",
+                    "type": "address"
+                },
+                {
+                    "internalType": "string",
+                    "name": "_email",
+                    "type": "string"
+                }
+            ],
+            "name": "insertOrUpdateArtist",
+            "outputs": [
+                {
+                    "internalType": "uint128",
+                    "name": "",
+                    "type": "uint128"
+                }
+            ],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "_artPackId",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "string",
+                    "name": "_colorCode",
+                    "type": "string"
+                },
+                {
+                    "internalType": "uint128",
+                    "name": "_rank",
+                    "type": "uint128"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "_id",
+                    "type": "uint256"
+                }
+            ],
+            "name": "insertOrUpdateBackground",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "_patternId",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "string",
+                    "name": "_name",
+                    "type": "string"
+                },
+                {
+                    "internalType": "string",
+                    "name": "_depth",
+                    "type": "string"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "_id",
+                    "type": "uint256"
+                }
+            ],
+            "name": "insertOrUpdateLayer",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "_layerId",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "string",
+                    "name": "_layerURL",
+                    "type": "string"
+                },
+                {
+                    "internalType": "string",
+                    "name": "_previewURL",
+                    "type": "string"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "_order",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "_id",
+                    "type": "uint256"
+                }
+            ],
+            "name": "insertOrUpdateLayerChoice",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "_layerChoiceId",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "string",
+                    "name": "_name",
+                    "type": "string"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "_id",
+                    "type": "uint256"
+                }
+            ],
+            "name": "insertOrUpdateLayerClass",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "_layerClassId",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "string",
+                    "name": "_fillHexCode",
+                    "type": "string"
+                },
+                {
+                    "internalType": "string",
+                    "name": "_transparancy",
+                    "type": "string"
+                },
+                {
+                    "internalType": "string",
+                    "name": "_strokeHexCode",
+                    "type": "string"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "_id",
+                    "type": "uint256"
+                }
+            ],
+            "name": "insertOrUpdateLayerStyle",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "_artPackId",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "string",
+                    "name": "_name",
+                    "type": "string"
+                },
+                {
+                    "internalType": "string",
+                    "name": "_patternURL",
+                    "type": "string"
+                },
+                {
+                    "internalType": "string",
+                    "name": "_thumbnailURL",
+                    "type": "string"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "_id",
+                    "type": "uint256"
+                }
+            ],
+            "name": "insertOrUpdatePattern",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "_campaignId",
+                    "type": "uint256"
+                }
+            ],
+            "name": "isCampaignAllowed",
+            "outputs": [
+                {
+                    "internalType": "bool",
+                    "name": "",
+                    "type": "bool"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint256[]",
+                    "name": "",
+                    "type": "uint256[]"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "name": "layerChoiceCounter",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "name": "layerChoiceList",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "layerChoiceId",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "string",
+                    "name": "layerURL",
+                    "type": "string"
+                },
+                {
+                    "internalType": "string",
+                    "name": "layerPreviewURL",
+                    "type": "string"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "layerId",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "order",
+                    "type": "uint256"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "name": "layerClassCounter",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "name": "layerClassList",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "layerClassId",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "string",
+                    "name": "layerClassName",
+                    "type": "string"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "layerChoiceId",
+                    "type": "uint256"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "name": "layerCounter",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "name": "layerList",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "layerId",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "string",
+                    "name": "layerName",
+                    "type": "string"
+                },
+                {
+                    "internalType": "string",
+                    "name": "layerDepth",
+                    "type": "string"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "patternId",
+                    "type": "uint256"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "name": "layerStyleCounter",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "name": "layerStyleList",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "layerStyleColorId",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "string",
+                    "name": "fillHexCode",
+                    "type": "string"
+                },
+                {
+                    "internalType": "string",
+                    "name": "transparancy",
+                    "type": "string"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "layerClassId",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "string",
+                    "name": "strokeHexCode",
+                    "type": "string"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "name": "patternCounter",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "name": "patternList",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "patternId",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "string",
+                    "name": "patternName",
+                    "type": "string"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "artPackId",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "string",
+                    "name": "thumbnailURL",
+                    "type": "string"
+                },
+                {
+                    "internalType": "string",
+                    "name": "patternURL",
+                    "type": "string"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "_campaignId",
+                    "type": "uint256"
+                }
+            ],
+            "name": "rejectCampaign",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "_campaignId",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "_artPackId",
+                    "type": "uint256"
+                }
+            ],
+            "name": "requestForApproval",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "_id",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "_number",
+                    "type": "uint256"
+                }
+            ],
+            "name": "updateNameNextNumber",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        }
+    ]
+}

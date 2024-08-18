@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3000 3000">
+    <defs>
+        <style>
+            .background {
+                fill: #ddd6d6;
+            }
+        </style>
+    </defs>
+    <rect class="background" width="3000" height="3000"/>
+    <g class="patterns">
+     
+    </g>
+</svg>

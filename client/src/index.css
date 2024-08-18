@@ -1,0 +1,37 @@
+/* ----- Base Style ----- */
+
+@import "./assets/css/base.css";
+
+/* ----- Header, Body & Footer ----- */
+
+@import "./assets/css/template.css";
+
+/* ----- Home Page ------ */
+
+@import "./assets/css/home.css";
+
+/* ----- Faqs Page ----- */
+
+@import "./assets/css/faqs.css";
+
+/* ----- Buy Page ----- */
+
+@import "./assets/css/buy.css";
+
+/* ----- Mint Page ----- */
+
+@import "./assets/css/mint.css";
+
+/* ----- Card ----- */
+
+@import "./assets/css/card.css";
+
+/* ----- Modal ----- */
+
+@import "./assets/css/modal.css";
+
+/* ----- Carousel ----- */
+
+@import "./assets/css/swiper.css";
+
+@import "./assets/css/error.css";

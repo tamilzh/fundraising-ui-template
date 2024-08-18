@@ -1,0 +1,992 @@
+{
+    "contractName": "Campaign",
+    "address": "0x079118268F9071A969ab893B8C1c9c9F3F215210",
+    "version": "0.9.1",
+    "abi": [
+        {
+            "inputs": [],
+            "name": "beneficiaryCounter",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "name": "beneficiaryList",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "beneficiaryId",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "string",
+                    "name": "beneficiaryName",
+                    "type": "string"
+                },
+                {
+                    "internalType": "address payable",
+                    "name": "beneficiaryAddress",
+                    "type": "address"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "name": "bgPriceCounter",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "name": "bgPriceList",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "backgroundPriceId",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "campaignId",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint128",
+                    "name": "rank",
+                    "type": "uint128"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "price",
+                    "type": "uint256"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "name": "campaignCounter",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "name": "campaignList",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "campaignId",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "string",
+                    "name": "campaignName",
+                    "type": "string"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "sponsorId",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "beneficiaryId",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint128",
+                    "name": "artPackId",
+                    "type": "uint128"
+                },
+                {
+                    "components": [
+                        {
+                            "internalType": "uint256",
+                            "name": "sponsorDistroMin",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "sponsorDistroMax",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "beneficiaryDistroMin",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "beneficiaryDistroMax",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "artistDistroMin",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "artistDistroMax",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "sellerDistroMin",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "sellerDistroMax",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "devCutOfSponsorDistro",
+                            "type": "uint256"
+                        }
+                    ],
+                    "internalType": "struct Campaign.CampaignDistro",
+                    "name": "campaignDistro",
+                    "type": "tuple"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "startsOn",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "endsOn",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "bool",
+                    "name": "datesLocked",
+                    "type": "bool"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "maxCount",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "address",
+                    "name": "createdBy",
+                    "type": "address"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "_campaignId",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "string",
+                    "name": "_name",
+                    "type": "string"
+                }
+            ],
+            "name": "cloneCampaign",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "address",
+                    "name": "_address",
+                    "type": "address"
+                }
+            ],
+            "name": "getBeneficiaryByAddress",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "_campaignId",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "_rank",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "mode",
+                    "type": "uint256"
+                }
+            ],
+            "name": "getBgPriceByCampaign",
+            "outputs": [
+                {
+                    "components": [
+                        {
+                            "internalType": "uint256",
+                            "name": "backgroundPriceId",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "campaignId",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "uint128",
+                            "name": "rank",
+                            "type": "uint128"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "price",
+                            "type": "uint256"
+                        }
+                    ],
+                    "internalType": "struct BackgroundPrice.BackgroundPriceObj[]",
+                    "name": "",
+                    "type": "tuple[]"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "address",
+                    "name": "_address",
+                    "type": "address"
+                },
+                {
+                    "internalType": "uint128",
+                    "name": "_type",
+                    "type": "uint128"
+                }
+            ],
+            "name": "getCampaignByAddress",
+            "outputs": [
+                {
+                    "internalType": "uint256[]",
+                    "name": "",
+                    "type": "uint256[]"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "_campaignId",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "string",
+                    "name": "_category",
+                    "type": "string"
+                }
+            ],
+            "name": "getCampaignDistributionList",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "address",
+                    "name": "",
+                    "type": "address"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "_campaignId",
+                    "type": "uint256"
+                }
+            ],
+            "name": "getCampaignOwner",
+            "outputs": [
+                {
+                    "internalType": "address",
+                    "name": "",
+                    "type": "address"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "_campaignId",
+                    "type": "uint256"
+                }
+            ],
+            "name": "getPresetDistributionByCampaignId",
+            "outputs": [
+                {
+                    "components": [
+                        {
+                            "internalType": "uint256",
+                            "name": "distroPresetId",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "string",
+                            "name": "presetName",
+                            "type": "string"
+                        },
+                        {
+                            "internalType": "string",
+                            "name": "shortPresetName",
+                            "type": "string"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "presetOrder",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "sponsorDistro",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "beneficiaryDistro",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "artistDistro",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "campaignId",
+                            "type": "uint256"
+                        }
+                    ],
+                    "internalType": "struct PresetDistribution.PresetDistributionObj[]",
+                    "name": "",
+                    "type": "tuple[]"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "address",
+                    "name": "_address",
+                    "type": "address"
+                }
+            ],
+            "name": "getSponsorByAddress",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "address",
+                    "name": "_artistContractAddress",
+                    "type": "address"
+                }
+            ],
+            "name": "initialize",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "_campaignId",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint128",
+                    "name": "_rank",
+                    "type": "uint128"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "_price",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "_id",
+                    "type": "uint256"
+                }
+            ],
+            "name": "insertOrUpdateBackgroundPrice",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "string",
+                    "name": "_name",
+                    "type": "string"
+                },
+                {
+                    "internalType": "address",
+                    "name": "_address",
+                    "type": "address"
+                }
+            ],
+            "name": "insertOrUpdateBeneficiary",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "string",
+                    "name": "_name",
+                    "type": "string"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "_sponsorId",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "_beneficiaryId",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint128",
+                    "name": "_artPackId",
+                    "type": "uint128"
+                },
+                {
+                    "components": [
+                        {
+                            "internalType": "uint256",
+                            "name": "sponsorDistroMin",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "sponsorDistroMax",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "beneficiaryDistroMin",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "beneficiaryDistroMax",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "artistDistroMin",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "artistDistroMax",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "sellerDistroMin",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "sellerDistroMax",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "devCutOfSponsorDistro",
+                            "type": "uint256"
+                        }
+                    ],
+                    "internalType": "struct Campaign.CampaignDistro",
+                    "name": "campaignDistro",
+                    "type": "tuple"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "_startsOn",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "_endsOn",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "bool",
+                    "name": "_datesLocked",
+                    "type": "bool"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "_maxCount",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "_id",
+                    "type": "uint256"
+                }
+            ],
+            "name": "insertOrUpdateCampaign",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "string",
+                    "name": "_name",
+                    "type": "string"
+                },
+                {
+                    "internalType": "string",
+                    "name": "_shortPresetName",
+                    "type": "string"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "_order",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "_sponsorDistro",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "_beneficiaryDistro",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "_artistDistro",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "_campaignId",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "_id",
+                    "type": "uint256"
+                }
+            ],
+            "name": "insertOrUpdatePresetDistribution",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "string",
+                    "name": "_name",
+                    "type": "string"
+                },
+                {
+                    "internalType": "address",
+                    "name": "_address",
+                    "type": "address"
+                },
+                {
+                    "internalType": "string",
+                    "name": "_email",
+                    "type": "string"
+                }
+            ],
+            "name": "insertOrUpdateSponsor",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "_campaignId",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "_campaignTotalMint",
+                    "type": "uint256"
+                }
+            ],
+            "name": "isCampaignApproved",
+            "outputs": [
+                {
+                    "internalType": "bool",
+                    "name": "",
+                    "type": "bool"
+                },
+                {
+                    "internalType": "string",
+                    "name": "",
+                    "type": "string"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "name": "presetDistributionCounter",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "name": "presetDistributionList",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "distroPresetId",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "string",
+                    "name": "presetName",
+                    "type": "string"
+                },
+                {
+                    "internalType": "string",
+                    "name": "shortPresetName",
+                    "type": "string"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "presetOrder",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "sponsorDistro",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "beneficiaryDistro",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "artistDistro",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "campaignId",
+                    "type": "uint256"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "name": "sponsorCounter",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "name": "sponsorList",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "sponsorId",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "string",
+                    "name": "sponsorName",
+                    "type": "string"
+                },
+                {
+                    "internalType": "address payable",
+                    "name": "sponsorAddress",
+                    "type": "address"
+                },
+                {
+                    "internalType": "string",
+                    "name": "sponsorEmail",
+                    "type": "string"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "bytes",
+                    "name": "a",
+                    "type": "bytes"
+                },
+                {
+                    "internalType": "bytes",
+                    "name": "b",
+                    "type": "bytes"
+                }
+            ],
+            "name": "stringCompare01",
+            "outputs": [
+                {
+                    "internalType": "bool",
+                    "name": "",
+                    "type": "bool"
+                }
+            ],
+            "stateMutability": "pure",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "bytes",
+                    "name": "a",
+                    "type": "bytes"
+                },
+                {
+                    "internalType": "bytes",
+                    "name": "b",
+                    "type": "bytes"
+                }
+            ],
+            "name": "stringCompare02",
+            "outputs": [
+                {
+                    "internalType": "bool",
+                    "name": "",
+                    "type": "bool"
+                }
+            ],
+            "stateMutability": "pure",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "address",
+                    "name": "_artistContractAddress",
+                    "type": "address"
+                }
+            ],
+            "name": "updateArtistContractAddress",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "_id",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "_number",
+                    "type": "uint256"
+                }
+            ],
+            "name": "updateNameNextNumber",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "_campaignId",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "string",
+                    "name": "_colorCodeHex",
+                    "type": "string"
+                }
+            ],
+            "name": "validatePrice",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        }
+    ]
+}

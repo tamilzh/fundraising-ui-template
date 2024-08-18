@@ -1,0 +1,621 @@
+/* Card */
+
+.nft-cards {
+  display: flex;
+  gap: 4rem;
+  /* width: 100%; */
+  margin: auto;
+  flex-flow: row wrap;
+}
+
+.nft-grid-card__wrapper {
+  width: calc((100% - 12rem) / 4);
+}
+
+.card {
+  width: 100%;
+  aspect-ratio: 3/4;
+  background-color: white;
+  border-radius: 1.5rem;
+}
+
+.card__top-box {
+  cursor: pointer;
+  height: 76%;
+  width: 100%;
+  position: relative;
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+}
+
+.card__img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  border-radius: inherit;
+}
+
+.img-overlay {
+  opacity: 0.5;
+}
+
+.card__img-overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  font-size: 3rem;
+  font-weight: 500;
+  width: fit-content;
+  color: #e63a40;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 0 1.5rem;
+  text-align: center;
+}
+
+.card__download-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+  background-color: hsla(0, 0%, 100%, 0.72);
+  padding: .8rem 1rem;
+  border-radius: 100%;
+}
+
+.card__download-icon {
+  height: 2rem;
+}
+
+.card__bottom-box {
+  height: 24%;
+  padding: 1rem 2.5rem;
+  position: relative;
+}
+
+.card__body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+.group {
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: space-between;
+  /* align-self: end; */
+}
+
+/* .group1, .group2 {
+    display: flex;
+    justify-content: space-between;
+} */
+
+.card__title {
+  font-size: 1.7rem;
+  font-weight: 600;
+  color: var(--primary-grey);
+  margin-bottom: 0.3rem;
+}
+
+.card__text {
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: var(--primary-grey);
+}
+
+.card__addr {
+  float: left;
+}
+
+.card__type {
+  float: right;
+}
+
+.card__btn {
+  width: fit-content;
+  font-size: 1rem;
+  font-weight: 400;
+  background-color: transparent;
+  color: var(--secondary-blue);
+  border: 1px solid var(--secondary-blue);
+  border-radius: 2.5rem;
+  padding: 0.3rem 1.5rem;
+  cursor: pointer;
+  float: left;
+}
+
+.card__body-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card__body-bottom {
+  position: relative;
+}
+
+.card__body-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-self: flex-end;
+  /* margin-top: -3.5rem; */
+  text-align: right;
+  z-index: 1;
+}
+
+.pie__wrapper {
+  width: var(--pie-width);
+  /* height: var(--pie-height); */
+  aspect-ratio: 1;
+  float: right;
+  /* margin-bottom: .3rem; */
+  cursor: pointer;
+  position: absolute;
+  /* top: calc(100% - calc(var(--pie-height)/2)); */
+  top: -55%;
+  right: -7px;
+}
+
+.piechart {
+  height: 6rem;
+  margin-bottom: 0.3rem;
+}
+
+.nft-price {
+  font-size: 1.7rem;
+  float: right;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.topfund-cards .card {
+  box-shadow: 0px 6px 6px #00000029;
+}
+
+.topfund-cards .card__title {
+  font-size: 1.9rem;
+  margin-bottom: 0.6rem;
+}
+
+.topfund-cards .card__text {
+  font-size: 1.4rem;
+}
+.topfund-cards .nft-price {
+  font-size: 1.9rem;
+}
+
+.topfund-cards .card__btn {
+  font-size: 1.2rem;
+  padding: 0.3rem 1.3rem;
+}
+
+.mint-card {
+  width: 25rem;
+}
+
+.mint-card .card {
+  box-shadow: 5px 5px 8px #00000014;
+}
+
+.mint-card .card__title {
+  font-size: 1.6rem;
+  margin-bottom: 0.3rem;
+}
+
+.mint-card .card__text {
+  font-size: 1.2rem;
+}
+
+.mint-card .card__btn {
+  font-size: 1rem;
+  padding: 0.2rem 1rem;
+}
+
+.mint-card .card__top-box {
+  height: 76%;
+}
+
+.mint-card .card__bottom-box {
+  height: 24%;
+  padding: 0.9rem 1.8rem;
+}
+
+.mint-card .nft-price {
+  font-size: 1.5rem;
+}
+
+.buy-cards .card {
+  box-shadow: 5px 5px 5px #00000014;
+}
+
+.buy-cards .card__title {
+  font-size: 1.6rem;
+  margin-bottom: 0.3rem;
+}
+
+.buy-cards .card__text {
+  font-size: 1.2rem;
+}
+
+.buy-cards .card__btn {
+  font-size: 1rem;
+  padding: 0.2rem 1rem;
+}
+
+.buy-cards .card__top-box {
+  height: 76%;
+}
+
+.buy-cards .card__bottom-box {
+  height: 24%;
+  padding: 0.9rem 1.8rem;
+}
+
+.buy-cards .nft-price {
+  font-size: 1.5rem;
+}
+
+.my-nfts .card, .mynft__swipper .card {
+  box-shadow: 5px 5px 5px #00000014;
+}
+
+.my-nfts .card__title, .mynft__swipper .card__title {
+  font-size: 1.5rem;
+  margin-bottom: 0.3rem;
+}
+
+.my-nfts .card__text, .mynft__swipper .card__text {
+  font-size: 1.2rem;
+}
+
+.my-nfts .card__btn, .mynft__swipper .card__btn {
+  font-size: 1rem;
+  padding: 0.2rem 1rem;
+}
+
+.my-nfts .nft-price, .mynft__swipper .nft-price {
+  font-size: 1.4rem;
+}
+
+.my-nfts .card__bottom-box, .mynft__swipper .card__bottom-box {
+  padding: 0.7rem 1.2rem;
+}
+
+.simple-card {
+  width: 100%;
+  aspect-ratio: 3/4;
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 8px 8px 8px #00000014;
+}
+
+.simple-card__top-box {
+  height: 77%;
+  width: 100%;
+  position: relative;
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+}
+
+.simple-card__img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  border-radius: inherit;
+}
+
+.simple-card__bottom-box {
+  height: 23%;
+  padding: 1rem 2.5rem;
+}
+
+.simple-card__body {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.simple-card__title {
+  font-size: 1.7rem;
+  font-weight: 600;
+  color: var(--primary-grey);
+  text-align: center;
+}
+
+.ribbon {
+  position: absolute;
+  left: -5px;
+  top: -5px;
+  z-index: 1;
+  overflow: hidden;
+  width: 75px;
+  height: 75px;
+  text-align: right;
+}
+
+.ribbon span {
+  font-size: 10px;
+  color: #fff;
+  /* text-transform: uppercase; */
+  text-align: center;
+  font-weight: bold;
+  line-height: 20px;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  /* Needed for Safari */
+  width: 100px;
+  display: block;
+  background: linear-gradient(#699bd7 5%, var(--web-primary-color) 95%);
+  box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 19px;
+  left: -21px;
+}
+
+.ribbon span::before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 100%;
+  z-index: -1;
+  border-left: 3px solid #048989;
+  border-right: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  border-top: 3px solid #048989;
+}
+
+.ribbon span::after {
+  content: "";
+  position: absolute;
+  right: 0%;
+  top: 100%;
+  z-index: -1;
+  border-right: 3px solid #048989;
+  border-left: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  border-top: 3px solid #048989;
+}
+
+/** Card loader */
+
+.card-loader {
+  background-color: #fff;
+  box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.08),
+    0 -1px 3px 0 rgba(0, 0, 0, 0.06);
+  padding: 8px;
+  position: relative;
+  border-radius: inherit;
+  margin-bottom: 0;
+  height: 100%;
+  overflow: hidden;
+}
+.card-loader:only-child {
+  margin-top: 0;
+}
+.card-loader:before {
+  content: "";
+  height: 77%;
+  display: block;
+  background-color: #ededed;
+}
+.card-loader:after {
+  content: "";
+  background-color: #333;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation-duration: 0.6s;
+  animation-iteration-count: infinite;
+  animation-name: loader-animate;
+  animation-timing-function: linear;
+  background: -webkit-linear-gradient(
+    left,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.6) 30%,
+    rgba(255, 255, 255, 0) 81%
+  );
+  background: -o-linear-gradient(
+    left,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.6) 30%,
+    rgba(255, 255, 255, 0) 81%
+  );
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.6) 30%,
+    rgba(255, 255, 255, 0) 81%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff', endColorstr='#00ffffff',GradientType=1);
+}
+@keyframes loader-animate {
+  0% {
+    transform: translate3d(-100%, 0, 0);
+  }
+  100% {
+    transform: translate3d(100%, 0, 0);
+  }
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: var(--web-primary-color);
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  left: 50%;
+  top: -20px;
+  transform: translate(-50%, -40%);
+  z-index: 1;
+}
+
+.tooltip .tooltiptext::after {
+    content: '';
+    width: 7px;
+    height: 7px;
+    background-color: var(--web-primary-color);
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -3.5px) rotate(45deg);
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+@media (max-width: 760px) {
+
+  .card__title {
+    color: var(--web-primary-color);
+  }
+
+  .card__download-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+    background-color: hsla(0, 0%, 100%, 0.72);
+    padding: 1rem 1.5rem;
+    border-radius: 100%;
+  }
+  
+  .card__download-icon {
+    height: 4rem;
+  }
+
+  .mint-card {
+    width: 55vw;
+    margin: auto;
+  }
+  
+  .mint-card .card {
+    box-shadow: 5px 5px 8px #00000014;
+    border-radius: 3rem;
+  }
+  
+  .mint-card .card__title {
+    font-size: 2.6rem;
+    margin-bottom: 1rem;
+  }
+  
+  .mint-card .card__text {
+    font-size: 2rem;
+  }
+  
+  .mint-card .card__btn {
+    font-size: 1rem;
+    padding: 0.2rem 1rem;
+  }
+  
+  .mint-card .card__top-box {
+    height: 76%;
+  }
+  
+  .mint-card .card__bottom-box {
+    height: 24%;
+    padding: 1rem 2rem;
+  }
+  
+  .mint-card .nft-price {
+    font-size: 2.5rem;
+  }
+  .nft-cards {
+    margin: 10rem 0;
+  }
+  .nft-grid-card__wrapper {
+    width: 100%;
+    padding: 0 10rem;
+    margin-bottom: 3rem;
+  }
+  
+  .buy-cards .card__title {
+    font-size: 3.7rem;
+    margin-bottom: 1rem;
+  }
+  
+  .buy-cards .card__text {
+    font-size: 3rem;
+  }
+  
+  .buy-cards .card__btn {
+    font-size: 3rem;
+    padding: 0.5rem 3rem;
+  }
+  
+  .buy-cards .card__top-box {
+    height: 76%;
+  }
+  
+  .buy-cards .card__bottom-box {
+    height: 24%;
+    padding: 1.2rem 2rem;
+  }
+  
+  .buy-cards .nft-price {
+    font-size: 3rem;
+  }
+
+  .mynft-cards-mobile .card {
+    box-shadow: 8px 8px 8px #00000014;
+  }
+
+  .mynft-cards-mobile .card__title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .mynft-cards-mobile .card__text {
+    font-size: 2rem;
+  }
+  
+  .mynft-cards-mobile .card__btn {
+    font-size: 2rem;
+    padding: 0.5rem 3rem;
+  }
+  
+  .mynft-cards-mobile .card__bottom-box {
+    padding: 1.2rem 2rem;
+  }
+  
+  .mynft-cards-mobile .nft-price {
+    font-size: 2.5rem;
+  }
+
+  .simple-card__top-box {
+    height: 80%;
+  }
+  
+  .simple-card__bottom-box {
+    height: 20%;
+    padding: 1rem 2.5rem;
+  }
+
+  .simple-card__title {
+    font-size: 3.5rem;
+    color: var(--web-primary-color);
+  }
+  .card__img-overlay-text {
+    font-size: 6rem;
+  }
+  
+}

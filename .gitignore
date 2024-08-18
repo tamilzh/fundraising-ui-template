@@ -1,0 +1,56 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules*
+/.pnp
+.pnp.js
+/deploy
+/client/build
+package-lock.json
+# testing
+/coverage
+
+/client/node_modules*
+/server/node_modules
+/frontend/node_modules
+
+# production
+/build
+
+# misc
+.DS_Store
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+/client/src/components/Mint aratrika/Catalogue.jsx
+/client/src/components/Mint aratrika/Distribution.jsx
+/client/src/components/Mint aratrika/FinalCheck.jsx
+/client/src/components/Mint aratrika/Mint.jsx
+/client/src/components/Mint aratrika/MintFooter.jsx
+/client/src/components/Mint aratrika/MintOptions.jsx
+/client/src/components/Mint aratrika/Name.jsx
+/client/src/components/Mint aratrika/NftPreview.jsx
+/client/src/components/Mint aratrika/PieDist.jsx
+/client/src/components/Mint cpu/BackgroundColor.jsx
+/client/src/components/Mint cpu/BgColor copy.jsx
+/client/src/components/Mint cpu/Distribution.jsx
+/client/src/components/Mint cpu/FinalCheck.jsx
+/client/src/components/Mint cpu/Mint copy 2.jsx
+/client/src/components/Mint cpu/Mint copy.jsx
+/client/src/components/Mint cpu/Mint.jsx
+/client/src/components/Mint cpu/MintFooter.jsx
+/client/src/components/Mint cpu/MintOptions.jsx
+/client/src/components/Mint cpu/Name.jsx
+/client/src/components/Mint cpu/NftPreview.jsx
+/client/src/components/Mint cpu/Patterns.jsx
+/client/src/components/Mint cpu/PieDist.jsx
+/client/src/components/Mint/BgColor copy.jsx
+/client/src/components/Mint/Mint copy 2.jsx
+/client/src/components/Mint/Mint copy.jsx
+/server/pattern.svg
+/.vscode/settings.json
+.husky

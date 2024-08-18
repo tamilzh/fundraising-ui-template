@@ -1,0 +1,57 @@
+/* Swiper */
+
+.mynft__swipper {
+    position: relative;
+    margin: 2rem 0;
+}
+
+.swiper {
+    position: static !important;
+    margin: 0 4rem 0 5rem !important;
+    padding: 10px !important;
+}
+
+.mint__bg-box .swiper {
+    margin: 0 1.5rem 0 1.5rem !important;
+}
+
+.mint__bg-box .swiper-slide {
+    padding: 2rem !important;
+}
+
+.swiper-button-prev {
+    left: 0px !important;
+}
+
+.mint__bg-box .swiper-button-prev {
+    left: 5px !important;
+}
+
+.swiper-button-next {
+    right: 0px !important;
+}
+
+.mint__bg-box .swiper-button-next {
+    right: 5px !important;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    font-size: 3rem !important;
+    font-weight: 600;
+}
+
+.mint__bg-box .swiper-button-prev::after,
+.mint__bg-box .swiper-button-next::after {
+    font-size: 2.5rem !important;
+    font-weight: 700;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: var(--secondary-blue) !important;
+}
+
+.swiper-slide {
+    user-select: none !important;
+}

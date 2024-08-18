@@ -1,0 +1,5 @@
+runtime: nodejs16 # or another supported version
+
+env_variables:
+  PORT: 8080
+  NODE_ENV: development

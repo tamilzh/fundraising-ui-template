@@ -1,0 +1,363 @@
+/* Modal & Popup */
+
+.modal {
+    width: 100%;
+    height: 100vh;
+    background-color: #54505050;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+.warn-modal {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(210, 210, 233, 0.62);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+.popup {
+    margin: auto;
+    /* padding: 3rem 5rem; */
+    border-radius: 1.5rem;
+    background-color: white;
+    box-shadow: 5px 5px 8px #0000005E;
+    width: fit-content;
+    max-height: 60rem;
+    overflow-y: scroll;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.popup::-webkit-scrollbar {
+    display: none;
+  }
+
+.warn-popup {
+    margin: auto;
+    padding: 3rem 5rem;
+    background-color: #ffffffd7;
+    box-shadow: 6px 6px 20px #0000001C;;
+    width: 100rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.close-btn__wrapper {
+    position: absolute;
+    top: 0;
+    right: 0rem;
+    cursor: pointer;
+}
+
+.close-btn__bar {
+    position: absolute;
+    width: 2.5rem;
+    height: .4rem;
+    background-color: var(--primary-grey);
+    border-radius: 1rem;
+}
+
+.bar1 {
+    transform: rotate(45deg);
+}
+
+.bar2 {
+    transform: rotate(-45deg);
+}
+
+
+/* Pie Popup */
+
+.pie-popup {
+    position: relative;
+}
+
+.pie-popup .close-btn__wrapper {
+    top: 0;
+    right: 0;
+}
+
+.pie-popup-content {
+    display: flex;
+    align-items: center;
+}
+
+.pie-popup-title {
+    font-size: 3.3rem;
+    font-weight: 600;
+    color: var(--primary-grey);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.pie-popup .pie-label__color-box {
+    width: 2.3rem;
+    height: 2.3rem;
+}
+
+.pie-popup .pie-label {
+    font-size: 1.5rem;
+}
+
+
+/* Sale Popup */
+
+.salepopup__title {
+    font-size: 3.3rem;
+    font-weight: 600;
+    color: var(--web-primary-color);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.salepopup__info-box {
+    display: flex;
+    column-gap: 8rem;
+    margin-bottom: 4rem;
+}
+
+.sale-division th,
+.sale-division td {
+    padding: 1.2rem 2rem;
+}
+
+.sale-division tr:not(:last-child) {
+    border-bottom: 1px solid var(--secondary-grey);
+}
+
+.sale-division {
+    border-collapse: collapse;
+    margin-bottom: 3rem;
+    width: max-content;
+}
+
+.sale-division th:not(:first-child),
+td:not(:first-child) {
+    text-align: center;
+}
+
+.table-text-header {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--primary-grey);
+}
+
+.table-text-data {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: var(--primary-grey);
+}
+
+.sale-price th:not(:first-child),
+.sale-price td:not(:first-child) {
+    padding-left: 1rem;
+}
+
+.sale-price th,
+.sale-price td {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-right: 1rem;
+}
+
+.sale-price__input {
+    width: 12rem;
+    padding: .7rem 1rem;
+    border: 1px solid var(--primary-grey);
+    text-align: center;
+}
+
+.sale-btns {
+    justify-content: space-between;
+}
+
+.cancel-btn,
+.sale-btn {
+    font-size: 1.7rem;
+    font-weight: 400;
+    color: white;
+    border: 2px solid var(--web-primary-color);
+    border-radius: 30px;
+    padding: .7rem 4rem;
+    background-color: var(--web-primary-color);
+    cursor: pointer;
+}
+
+.sale-btn:disabled {
+    cursor: not-allowed;
+    color: var(--secondary-grey);
+}
+
+.share-modal {
+    /* width: 20rem; */
+    position: relative;
+    padding: 1.5rem 5rem;
+}
+.share-icons {
+    display: flex;
+    gap: 3rem;
+}
+.nft__download-btn, .nft__twitter-btn {
+    width: 4rem;
+    height: 4rem;
+    background-color: var(--web-primary-color);
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+}
+
+.nft__download-icon, .nft__twitter-icon {
+    height: 2rem;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@media (max-width: 760px) {
+
+    .close-btn__bar {
+        width: 4rem;
+        height: .8rem;
+    }
+
+    .close-btn__wrapper {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        cursor: pointer;
+    }
+
+    .popup {
+        width: max-content;
+        max-height: 85vh;
+        overflow: scroll;
+    }
+
+    .pie-popup-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pie-popup-title {
+        font-size: 4rem;
+        font-weight: 600;
+        color: var(--web-primary-color);
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    
+    .pie-popup .pie-label__color-box {
+        width: 2.3rem;
+        height: 2.3rem;
+    }
+    
+    .pie-popup .pie-label {
+        font-size: 2rem;
+    }
+
+    .salepopup__title {
+        font-size: 4rem;
+        font-weight: 600;
+        color: var(--web-primary-color);
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    
+    .salepopup__info-box {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 8rem;
+        margin-bottom: 4rem;
+    }
+    
+    .sale-division th,
+    .sale-division td {
+        padding: 1.5rem 1rem;
+    }
+    
+    .sale-division tr:not(:last-child) {
+        border-bottom: 1px solid var(--secondary-grey);
+    }
+    
+    .sale-division {
+        border-collapse: collapse;
+        margin-bottom: 3rem;
+        width: 100%;
+    }
+    
+    .sale-division th:not(:first-child),
+    td:not(:first-child) {
+        text-align: center;
+    }
+    
+    .table-text-header {
+        font-size: 2.5rem;
+        font-weight: 500;
+        color: var(--primary-grey);
+    }
+    
+    .table-text-data {
+        font-size: 2rem;
+        font-weight: 500;
+        color: var(--primary-grey);
+    }
+    
+    .sale-price th:not(:first-child),
+    .sale-price td:not(:first-child) {
+        padding-left: 1rem;
+    }
+    
+    .sale-price th,
+    .sale-price td {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        padding-right: 1rem;
+    }
+    
+    .sale-price__input {
+        width: 12rem;
+        padding: .7rem 1rem;
+        border: 1px solid var(--primary-grey);
+        text-align: center;
+    }
+    
+    .sale-btns {
+        justify-content: space-between;
+    }
+    
+    .cancel-btn,
+    .sale-btn {
+        font-size: 2.3rem;
+        font-weight: 400;
+        color: white;
+        border: 2px solid var(--web-primary-color);
+        border-radius: 30px;
+        padding: 1.2rem 4rem;
+        background-color: var(--web-primary-color);
+        cursor: pointer;
+    }
+    
+    .sale-btn:disabled {
+        cursor: not-allowed;
+        color: var(--secondary-grey);
+    }
+
+    .warn-popup {
+        width: inherit;
+    }
+}
