@@ -35,7 +35,8 @@
     "stream-browserify": "^3.0.0",
     "stream-http": "^3.2.0",
     "swiper": "^8.0.3",
-    "react-slick": "^0.29.0"
+    "react-slick": "^0.29.0",
+    "@avvy/client": "^3.3.2"
   },
   "scripts": {
     "start": "react-scripts start",

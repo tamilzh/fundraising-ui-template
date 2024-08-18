@@ -25,7 +25,6 @@
     "keywords": [],
     "license": "ISC",
     "dependencies": {
-        "@avvy/client": "^3.3.2",
         "@bundlr-network/client": "^0.7.1",
         "@google-cloud/datastore": "^7.0.0",
         "body-parser": "^1.19.2",
