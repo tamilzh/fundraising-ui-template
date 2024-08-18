@@ -41,13 +41,7 @@ app.get("/constants", async (req, res) => {
     NETWORK_URL: process.env.NETWORK_URL
   });
 });
-const root = path.join(__dirname, "client", "build");
-app.use(express.static(root, { lastModified: false, etag: false }));
 
-/** All other routes redirected to front-end app */
-app.get("*", function (req, res) {
-  res.sendFile("index.html", { root, lastModified: false, etag: false });
-});
 
 app.listen(PORT, async () => {
   console.log(`${process.env.NODE_ENV} server listening on ${PORT}`);
