@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "production": {
-    "env": {
+  "env": {
       "REACT_APP_VERSION": "1.0"
+    },
+  "functions": {
+    "env": {
+      "REACT_APP_VERSION": "1.q"
     }
   },
   "builds": [
