@@ -72,7 +72,7 @@ site.getFundraiserById = async (id) => {
 site.getSiteDistribution = async (siteDetails,artistDetails) => {
   //Please don't change slider order this will impact in distribution
   let color = constant.color;
-  let beneficiary = await Contract.beneficiaryList(siteDetails.beneficiaryId);
+ // let beneficiary = await Contract.beneficiaryList(siteDetails.beneficiaryId);
  // let fundraiser = await Contract.fundraiserList(siteDetails.fundraiserId);
   return [
     {

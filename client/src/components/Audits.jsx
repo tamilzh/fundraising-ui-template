@@ -1,6 +1,7 @@
 import React, { useEffect, useLayoutEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
 import Audit from "../md/Audits.md";
+import { getThemeConfig }from "../utils/common";
 
 const Audits = () => {
   const [md, setMD] = useState({});
@@ -13,15 +14,15 @@ const Audits = () => {
       .then((text) => {
         text = text.replace(
           new RegExp("{__beneficiary__}", "g"),
-          process.env.REACT_APP_WEBSITE_BENEFICIARY
+          getThemeConfig().APP_BENEFICIARY
         );
         text = text.replace(
           new RegExp("{__artist__}", "g"),
-          process.env.REACT_APP_WEBSITE_ARTIST
+          getThemeConfig().APP_ARTIST
         );
         text = text.replace(
           new RegExp("{__fundraiser__}", "g"),
-          process.env.REACT_APP_WEBSITE_FUNDRAISER
+          getThemeConfig().APP_SPONSOR
         );
         setMD(text);
       });

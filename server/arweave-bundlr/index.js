@@ -1,11 +1,22 @@
 import Bundlr from "@bundlr-network/client";
 import fs from "fs";
+
+const constant = {
+  ARWEAVE_NODE: process.env.ARWEAVE_NODE || "https://node1.bundlr.network",
+  ARWEAVE_LINK: process.env.ARWEAVE_LINK || "https://arweave.net/",
+  ARWEAVE_NETWORK_URL:
+    process.env.ARWEAVE_NETWORK_URL || "https://api.avax.network/ext/bc/C/rpc",
+  ARWEAVE_PRIVATE_KEY:
+    process.env.ARWEAVE_PRIVATE_KEY ||
+    "5d59e018069e693ad3170f469453e9988e2ac2d95f75e91351e0b85dc85f9468",
+  
+}
 const bundlr = new Bundlr.default(
-  process.env.ARWEAVE_NODE,
+  constant.ARWEAVE_NODE,
   'avalanche',
-  process.env.ARWEAVE_PRIVATE_KEY,
+  constant.ARWEAVE_PRIVATE_KEY,
   {
-    providerUrl: process.env.ARWEAVE_NETWORK_URL,
+    providerUrl: constant.ARWEAVE_NETWORK_URL,
   }
 );
 
@@ -26,7 +37,7 @@ const upload = async (fileOrData, isFile, format) => {
   // upload the transaction
   await tx.upload();
   // return the transaction id
-  return `${process.env.ARWEAVE_LINK}${tx.id}`;
+  return `${constant.ARWEAVE_LINK}${tx.id}`;
 }
 
 const fund = async (avax) => {

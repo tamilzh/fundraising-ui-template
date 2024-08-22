@@ -5,6 +5,7 @@ import { upload, fund } from "../arweave-bundlr/index.js";
 import request from "request";
 import { v4 as uuidv4 } from "uuid";
 import jsdom from "jsdom";
+import constant from "../utils/constant.js";
 const { JSDOM } = jsdom;
 const routes = express();
 
@@ -97,11 +98,9 @@ const processingImage = async (data, srcFile, destFile, preview = true) => {
     if (data[i].type === "color") {
       changeColor(data[i], destFile);
     } else {
-      if (process.env.IMAGE_TYPE?.toLowerCase() === "svg") {
+      if ((constant.IMAGE_TYPE)?.toLowerCase() === "svg") {
         await changeLayer(data[i], destFile);
       } else {
-        //const originalFile = `/tmp/${process.env.CONTRACT_ADDRESS_ARTIST}-${data[i].name}`;
-        //const resizeFile = `/tmp/preview-${process.env.CONTRACT_ADDRESS_ARTIST}-${data[i].name}`;
         const originalFile = `/tmp/${uuidv4()}`;
         const resizeFile = `/tmp/${uuidv4()}`;
 
@@ -123,7 +122,7 @@ const constructTokenURI = async (image, nftMetadata) => {
     nftMetadata.image = image.original;
     nftMetadata.imagepng = image.resized;
     nftMetadata.imageType = "image/png";
-    nftMetadata.license = process.env.NFT_LICENSE;
+    nftMetadata.license = constant.NFT_LICENSE;
     return await upload(JSON.stringify(nftMetadata), false, "application/json");
   }
 };
@@ -133,7 +132,7 @@ const uploadFileToArweave = async (finalNFTimage) => {
 
   const srcFile = "server/preview.svg";
   const destFile = `/tmp/${file}`;
-  const originalFile = `/tmp/${file}.${process.env.IMAGE_TYPE}`;
+  const originalFile = `/tmp/${file}.${constant.IMAGE_TYPE}`;
 
   const layers = await processingImage(data, srcFile, destFile, false);
   await sharp(destFile).composite(layers).jpeg().toFile(originalFile);
@@ -141,7 +140,7 @@ const uploadFileToArweave = async (finalNFTimage) => {
   const original = await upload(
     originalFile,
     true,
-    process.env.IMAGE_CONTENT_TYPE
+    constant.IMAGE_CONTENT_TYPE
   );
 
   // Should be always png for twitter and social media sharing
@@ -216,7 +215,7 @@ routes.post("/upload", async (req, res) => {
 });
 
 routes.post("/download", async (req, res) => {
-  const input_file = `/tmp/${uuidv4()}.${process.env.IMAGE_TYPE}`;
+  const input_file = `/tmp/${uuidv4()}.${constant.IMAGE_TYPE}`;
   const output_file = `/tmp/${uuidv4()}.png`;
   await downloadFile(req.body.url, input_file);
   await sharp(input_file)

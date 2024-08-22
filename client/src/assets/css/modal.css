@@ -57,8 +57,8 @@
 
 .close-btn__wrapper {
     position: absolute;
-    top: 0;
-    right: 0rem;
+    top: 3rem;
+    right: 5rem;
     cursor: pointer;
 }
 

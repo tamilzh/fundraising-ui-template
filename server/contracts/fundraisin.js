@@ -397,7 +397,7 @@ fundRaisin.getSHA256Hash = async (tokenId) => {
       metadata.attributes.map((item) => {
         return [item.trait_type, item.value, item.id];
       }),
-      metadata.license ? metadata.license : process.env.NFT_LICENSE,
+      metadata.license ? metadata.license : constant.NFT_LICENSE,
     ];
     let h = abi.encode(
       [

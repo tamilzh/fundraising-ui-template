@@ -10,6 +10,7 @@ import Spinner from "../Spinner";
 import logo from "../../assets/images/logo.svg";
 import "./index.css";
 import { BASE_API } from "../../utils/services";
+import { getThemeConfig }from "../../utils/common";
 
 function Widget(props) {
   const { type } = useParams();
@@ -19,8 +20,8 @@ function Widget(props) {
   const [usdPrice, setUSD] = useState(0);
   const [name, setName] = useState("");
   const [mode, setMode] = useState("")
-  const link = process.env.REACT_APP_WEBSITE_LINK;
-  const fundraisin_link = process.env.REACT_APP_FUNDRAISIN_WEBSITE_LINK;
+  const link = window.location.origin;
+  const fundraisin_link = getThemeConfig().APP_FUNDRAISIN_WEBSITE_LINK;
   const getNetwork = async () => {
     const response = await fetch(`${BASE_API}/network`);
     const network = await response.json();

@@ -1,8 +1,12 @@
+/* eslint-disable import/no-anonymous-default-export */
+
+import { getThemeConfig } from "./common";
+
 // eslint-disable-next-line import/no-anonymous-default-export
-const NFT_PLURAL = process.env.REACT_APP_NFT_PLURAL
-const BENEFICIARY = process.env.REACT_APP_BENEFICIARY_NAME
-const PURPOSE = process.env.REACT_APP_PURPOSE
-const campaign = process.env.REACT_APP_CAMPAIGN_NAME
+const NFT_PLURAL = getThemeConfig().APP_NFT_PLURAL
+const BENEFICIARY =getThemeConfig().APP_BENEFICIARY
+const PURPOSE = getThemeConfig().APP_PURPOSE
+const campaign = getThemeConfig().APP_CAMPAIGN_NAME
 export default {
   SNOWTRACE_API: "https://api-testnet.snowtrace.io/api",
   SNOWTRACE_GET_LOGS: "getLogs",

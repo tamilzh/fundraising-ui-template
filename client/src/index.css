@@ -1,5 +1,5 @@
 /* ----- Base Style ----- */
-
+@import "./assets/css/dynamic.css";
 @import "./assets/css/base.css";
 
 /* ----- Header, Body & Footer ----- */

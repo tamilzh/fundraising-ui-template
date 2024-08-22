@@ -7,33 +7,32 @@ import { useState } from "react";
 import Modal from "../Modal/Modal";
 import Popup from "../Modal/Popup";
 import HowUniquePopup from "../Modal/HowUniquePopup";
-import { NavLink } from "react-router-dom";
-import constant from "../../utils/constant";
+import { getThemeConfig }from "../../utils/common";
 
 const howUniqueCards = [
   {
     id: 0,
     icon: icon1,
-    title: process.env.REACT_APP_ABOUT_CARD_TITLE1,
-    desc: process.env.REACT_APP_ABOUT_CARD_DESC1,
+    title: getThemeConfig().APP_ABOUT_CARD_TITLE1,
+    desc: getThemeConfig().APP_ABOUT_CARD_DESC1,
   },
   {
     id: 1,
     icon: icon2,
-    title: process.env.REACT_APP_ABOUT_CARD_TITLE2,
-    desc: process.env.REACT_APP_ABOUT_CARD_DESC2,
+    title: getThemeConfig().APP_ABOUT_CARD_TITLE2,
+    desc: getThemeConfig().APP_ABOUT_CARD_DESC2,
   },
   {
     id: 2,
     icon: icon3,
-    title: process.env.REACT_APP_ABOUT_CARD_TITLE3,
-    desc: process.env.REACT_APP_ABOUT_CARD_DESC3,
+    title: getThemeConfig().APP_ABOUT_CARD_TITLE3,
+    desc: getThemeConfig().APP_ABOUT_CARD_DESC3,
   },
   {
     id: 3,
     icon: icon4,
-    title: process.env.REACT_APP_ABOUT_CARD_TITLE4,
-    desc: process.env.REACT_APP_ABOUT_CARD_DESC4
+    title: getThemeConfig().APP_ABOUT_CARD_TITLE4,
+    desc: getThemeConfig().APP_ABOUT_CARD_DESC4
   },
 ];
 const HowUnique = () => {
@@ -48,15 +47,14 @@ const HowUnique = () => {
   const closeModal = () => {
     setShow(!show);
   };
-
   return (
     <>
       <span className="link_wrapper" id="about"></span>
       <section className="how-unique default-settings gradient-bg">
-        <h1 className="how-unique__title title-ds">{process.env.REACT_APP_ABOUT_TITLE}</h1>
-        <h1 className="how-unique__title title-mb">{process.env.REACT_APP_ABOUT_TITLE}</h1>
+        <h1 className="how-unique__title title-ds">{getThemeConfig().APP_ABOUT_CARD_TITLE}</h1>
+        <h1 className="how-unique__title title-mb">{getThemeConfig().APP_ABOUT_CARD_TITLE}</h1>
         <div className="hr-line"></div>
-        <p className="how-unique__desc">{process.env.REACT_APP_ABOUT_DESC}</p>
+        <p className="how-unique__desc">{getThemeConfig().APP_ABOUT_CARD_DESC}</p>
         <div className="how-unique__cards">
           {howUniqueCards.map((item) => (
             <div

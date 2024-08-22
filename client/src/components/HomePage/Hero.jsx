@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect } from "react";
 import { Fade } from "react-slideshow-image";
 import { HashLink as Link } from "react-router-hash-link";
@@ -6,7 +7,7 @@ import Image2 from "../../assets/images/hero_nfts/Catdrop2.svg";
 import Image3 from "../../assets/images/hero_nfts/Catdrop3.svg";
 import { useState } from "react";
 import { getTokenOwner } from "../../utils/services";
-import constant from "../../utils/constant";
+import { getThemeConfig }from "../../utils/common";
 
 const Hero = (props) => {
   //const { nftData } = props; for listing top fundraiser
@@ -322,9 +323,9 @@ const Hero = (props) => {
                 </span>
               </div>
               <h1 className="hero__title">
-                The {process.env.REACT_APP_NFT_PLURAL} Collection
+                The {getThemeConfig().APP_NFT_PLURAL} Collection
               </h1>
-              <p className="hero__desc">Discover, collect, and trade extraordinary {process.env.REACT_APP_NFT_PLURAL} while [purpose] with [beneficiary].</p>
+              <p className="hero__desc">Discover, collect, and trade extraordinary {getThemeConfig().APP_NFT_PLURAL} while [purpose] with [beneficiary].</p>
               <Link to="/#about" smooth offset={-70} duration={500}>
                 <span className="hero__btn">Find out more</span>
               </Link>
@@ -343,12 +344,12 @@ const Hero = (props) => {
                 </span>
               </div> */}
             <h1 className="hero__title">
-              The {process.env.NFT_PLURAL} Collection
+              The {getThemeConfig().APP_NFT_PLURAL} Collection
             </h1>
             <div className="hero__nft-box">
               <Fade autoplay={true}>{getContent()}</Fade>
             </div>
-            <p className="hero__desc">Discover, collect, and trade extraordinary {process.env.REACT_APP_NFT_PLURAL} while [purpose] with [beneficiary].</p>
+            <p className="hero__desc">Discover, collect, and trade extraordinary {getThemeConfig().APP_NFT_PLURAL} while [purpose] with [beneficiary].</p>
             <Link to="/#about" smooth offset={-70} duration={500}>
               <span className="hero__btn">Find out more</span>
             </Link>

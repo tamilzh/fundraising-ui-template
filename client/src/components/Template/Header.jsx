@@ -14,6 +14,7 @@ import { isAndroid, isIOS } from "react-device-detect";
 import AVVY from "@avvy/client";
 import { ethers } from "ethers";
 import { getConstants } from "../../utils/services";
+import { getThemeConfig }from "../../utils/common";
 
 const Header = ({ walletAddress, connectWallet }) => {
   const [walletAdr, setWalletAdr] = useState(walletAddress);
@@ -43,7 +44,7 @@ const Header = ({ walletAddress, connectWallet }) => {
             window.location.replace(`https://metamask.app.link/`);
           };
           window.location.replace(
-            `dapp://${process.env.REACT_APP_WEBSITE_LINK.substring(8)}/`
+            `dapp://${window.location.origin.substring(8)}/`
           );
           setTimeout(fallbackToStore, 700);
         }
@@ -111,7 +112,7 @@ const Header = ({ walletAddress, connectWallet }) => {
       <nav className="navbar">
         <div className="nav__mobile-box">
           <a
-            href={process.env.REACT_APP_FUNDRAISIN_WEBSITE_LINK}
+            href={getThemeConfig().APP_FUNDRAISIN_WEBSITE_LINK}
             target="_blank"
             rel="noreferrer"
           >

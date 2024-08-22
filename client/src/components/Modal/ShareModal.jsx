@@ -2,10 +2,11 @@ import React from "react";
 import download_icon from "../../assets/images/download_icon.svg";
 import twitter from "../../assets/images/twitter.svg";
 import constant from "../../utils/constant";
+import { getThemeConfig }from "../../utils/common";
 
 const ShareModal = ({ card, onDownload, onClose }) => {
   const imageUrl = card?.imagepng.split(".net/");
-  const link = `${process.env.REACT_APP_WEBSITE_LINK}/share?image=${imageUrl[1]}%26tokenId=${card.tokenId}`;
+  const link = `${window.location.origin}/share?image=${imageUrl[1]}%26tokenId=${card.tokenId}`;
   const whatUserDid =
     card.numberOfTransfers === 0
       ? "minted"
@@ -17,7 +18,7 @@ const ShareModal = ({ card, onDownload, onClose }) => {
       text: `I just ${whatUserDid} a Fund Raisin %23NFT "${card.name.replace(
         "#",
         "%23"
-      )}" from the ${process.env.REACT_APP_WEBSITE_NAME} to help raise money for @${process.env.REACT_APP_WEBSITE_BENEFICIARY}.`,
+      )}" from the ${getThemeConfig().APP_WEBSITE_NAME} to help raise money for @${getThemeConfig().APP_BENEFICIARY}.`,
       url: link,
       hashtags: `AwardNFTs,Avalanche`,
     };

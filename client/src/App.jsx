@@ -22,6 +22,7 @@ import {
   getFilterData,
   getTotalMinted,
   BASE_API,
+  getWebsiteConfig,
 } from "./utils/services";
 import "./index.css";
 
@@ -42,6 +43,8 @@ const App = () => {
   const [newest, setNewest] = useState(false);
   const [filterData, setFilterData] = useState([]);
   const [query, setQuery] = useState();
+  const [webPrimaryColor, setWebPrimaryColor] = useState("");
+  const [webSecondaryColor, setWebSecondaryColor] = useState("");
   const previewFile = false;
   const getNetwork = async () => {
     const response = await fetch(`${BASE_API}/network`);
@@ -188,6 +191,34 @@ const App = () => {
     checkSiteActive();
   };
 
+  const updateSite = async () => {
+    const {
+      PRIMARY,
+      SECONDARY,
+      PRIMARY_GREY,
+      SECONDARY_GREY,
+      GRADIENT_LIGHT,
+      GRADIENT_DARK,
+      DROPDOWN_HOVER,
+      DISABLED_CLOSE,
+    } = await getWebsiteConfig();
+    const root = document.documentElement;
+    root.style.setProperty("--web-primary-color", PRIMARY);
+    root.style.setProperty("--web-seconady-color", SECONDARY);
+    root.style.setProperty("--primary-grey", PRIMARY_GREY);
+    root.style.setProperty("--secondary-grey", SECONDARY_GREY);
+    root.style.setProperty("--gradient-color-light", GRADIENT_LIGHT);
+    root.style.setProperty("--gradient-color-dark", GRADIENT_DARK);
+    root.style.setProperty("--dropdown-hover-color", DROPDOWN_HOVER);
+    root.style.setProperty("--disabled-button-color", DISABLED_CLOSE);
+    setWebPrimaryColor(PRIMARY);
+    setWebSecondaryColor(SECONDARY);
+  };
+
+  useEffect(() => {
+    updateSite();
+  }, []);
+
   useEffect(() => {
     checkBrowser();
     if (window.ethereum) {
@@ -273,10 +304,15 @@ const App = () => {
                 buyNftData,
                 buyLoading,
                 filterData,
+                webPrimaryColor,
+                webSecondaryColor,
               ]}
             />
           </div>
-          <Footer />
+          <Footer
+            webPrimaryColor={webPrimaryColor}
+            webSecondaryColor={webSecondaryColor}
+          />
         </React.Fragment>
       )}
     </React.Fragment>

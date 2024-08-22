@@ -1,0 +1,20 @@
+/* Base styles */
+
+:root {
+    /* Web Colors */
+    --web-primary-color: #6f6f6f;
+    --web-seconady-color: #6f6f6f;
+    
+    /* Grey Color */
+    --primary-grey: #58585D;
+    --secondary-grey: #cbcbcb;
+    --dropdown-hover-color: #cbcbcb;
+    --disabled-button-color: #cbcbcb;
+  
+    /* Gradient Color */
+    --gradient-color-light: #8C8C8C;
+    --gradient-color-dark: #4B4B4B;
+    /* Pie wrapper width height */
+    --pie-width: calc(100% / 4);
+    /* --pie-height: var(--pie-width); */
+  }

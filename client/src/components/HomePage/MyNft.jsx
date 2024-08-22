@@ -1,9 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Swiper } from "swiper/react";
 import { Navigation } from "swiper";
-import SimpleCard from "../SimpleCard";
 import { NavLink } from "react-router-dom";
 import Loader from "../Loader";
 import Slider from "react-slick";
@@ -20,6 +19,7 @@ import Error from "../Modal/Error";
 import ShareModal from "../Modal/ShareModal";
 import { useOutletContext } from "react-router-dom";
 import { BASE_API } from "../../utils/services";
+import { getThemeConfig }from "../../utils/common";
 
 const MyNft = () => {
   //const [nftData, setNftData] = useState(nft);
@@ -279,7 +279,7 @@ const MyNft = () => {
           return (
             <h1 className="no-nft-text">
               <NavLink to="/buy">Buy</NavLink> or{" "}
-              <NavLink to="/mint">mint</NavLink> your first {process.env.REACT_APP_NFT_NAME}!
+              <NavLink to="/mint">mint</NavLink> your first {getThemeConfig().APP_NFT_NAME}!
             </h1>
           );
         else if (nftData.length <= 3) {
@@ -373,7 +373,7 @@ const MyNft = () => {
           <NavLink to="/mint" className="link-design">
             mint
           </NavLink>{" "}
-          your first {process.env.REACT_APP_NFT_NAME}!
+          your first {getThemeConfig().APP_NFT_NAME}!
         </h1>
       );
     }
@@ -393,7 +393,7 @@ const MyNft = () => {
           return (
             <h1 className="no-nft-text">
               <NavLink to="/buy">Buy</NavLink> or{" "}
-              <NavLink to="/mint">mint</NavLink> your first {process.env.REACT_APP_NFT_NAME}!
+              <NavLink to="/mint">mint</NavLink> your first {getThemeConfig().APP_NFT_NAME}!
             </h1>
           );
         else {
@@ -433,7 +433,7 @@ const MyNft = () => {
           <NavLink to="/mint" className="link-design">
             mint
           </NavLink>{" "}
-          your first {process.env.REACT_APP_NFT_NAME}!
+          your first {getThemeConfig().APP_NFT_NAME}!
         </h1>
       );
     }
@@ -446,7 +446,7 @@ const MyNft = () => {
         <div className="mynft__title-box">
           <div className="mynft__title-column column1"></div>
           <div className="mynft__title-column column2">
-            <h1 className="mynft__title">My {process.env.REACT_APP_NFT_PLURAL}</h1>
+            <h1 className="mynft__title">My {getThemeConfig().APP_NFT_PLURAL}</h1>
           </div>
           <div className="mynft__title-column column3">
             {nftData.length !== 0 ? (

@@ -1,6 +1,6 @@
 import { logInfo } from "./log";
 
-export const { BASE_API } = process.env;
+export const BASE_API = process.env.BASE_API || window.location.origin;
 const getConstants = async () => {
   const response = await fetch(`${BASE_API}/constants`);
   const data = await response.json();
@@ -149,21 +149,37 @@ const getTokenOwner = async (tokenId) => {
 };
 
 const getTopFundraiser = async (walletAddress) => {
-  const response = await fetch(`${BASE_API}/fundraisin/top-nft/${walletAddress}`);
+  const response = await fetch(
+    `${BASE_API}/fundraisin/top-nft/${walletAddress}`
+  );
   const data = await response.json();
   return data;
 };
 
 const getMyNFT = async (walletAddress) => {
-  const response = await fetch(`${BASE_API}/fundraisin/my-nft/${walletAddress}`);
+  const response = await fetch(
+    `${BASE_API}/fundraisin/my-nft/${walletAddress}`
+  );
   const data = await response.json();
   return data;
 };
 
 const getTotalMinted = async () => {
-  const response = await fetch(`/fundraisin/totalminted`);
+  const response = await fetch(`${BASE_API}/fundraisin/totalminted`);
   const data = await response.json();
   return data;
+};
+
+const getWebsiteConfig = async () => {
+  const themeExists = sessionStorage.getItem("THEME");
+  if (!themeExists) {
+    const response = await fetch(`${BASE_API}/configuration`);
+    const data = await response.json();
+    sessionStorage.setItem("THEME", JSON.stringify(data));
+    return data;
+  } else {
+    return themeExists;
+  }
 };
 
 export {
@@ -185,4 +201,5 @@ export {
   getTokenOwner,
   getTotalMinted,
   getPreviewImage,
+  getWebsiteConfig,
 };

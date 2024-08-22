@@ -32,7 +32,7 @@ import {
 } from "../../utils/services";
 import constant from "../../utils/constant";
 import { v4 as uuidv4 } from "uuid";
-import { addLayerChoiceDynamically } from "../../utils/common";
+import { getThemeConfig, addLayerChoiceDynamically } from "../../utils/common";
 
 const Mint = () => {
   const [
@@ -483,7 +483,7 @@ const Mint = () => {
     let nftMetadata = {};
     let attributes = [];
     nftMetadata.name = `${selectedItems.name.approvedName} #${selectedItems.name.nextNameNumber}`;
-    nftMetadata.description = process.env.REACT_APP_WEBSITE_DESCRIPTION;
+    nftMetadata.description = getThemeConfig().APP_DESC;
     nftMetadata.presetDistribution = selectedItems.distribution;
     nftMetadata.price = selectedItems.background.price.toString();
     nftMetadata.mintedAt = Number((new Date().getTime() / 1000).toFixed(0));
