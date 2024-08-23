@@ -77,7 +77,6 @@ site.getSiteDistribution = async (siteDetails,artistDetails) => {
   return [
     {
       name: constant.BENEFICIARY_DISTRO_LABEL,
-      color: color[0],
       defaultValue: siteDetails.siteDistro.beneficiaryDistroMin / 100,
       min: siteDetails.siteDistro.beneficiaryDistroMin / 100,
       max: siteDetails.siteDistro.beneficiaryDistroMax / 100,
@@ -85,7 +84,6 @@ site.getSiteDistribution = async (siteDetails,artistDetails) => {
     },
     {
       name: constant.ARTIST_DISTRO_LABEL,// || artistDetails?.artistName,
-      color: color[1],
       defaultValue: siteDetails.siteDistro.artistDistroMin / 100,
       min: siteDetails.siteDistro.artistDistroMin / 100,
       max: siteDetails.siteDistro.artistDistroMax / 100,
@@ -93,7 +91,6 @@ site.getSiteDistribution = async (siteDetails,artistDetails) => {
     },
     {
       name: constant.FUNDRAISER_DISTRO_LABEL,// || fundraiser?.fundraiserName,
-      color: color[2],
       defaultValue: siteDetails.siteDistro.fundraiserDistroMin / 100,
       min: siteDetails.siteDistro.fundraiserDistroMin / 100,
       max: siteDetails.siteDistro.fundraiserDistroMax / 100,
@@ -101,7 +98,6 @@ site.getSiteDistribution = async (siteDetails,artistDetails) => {
     },
     {
       name: constant.SELLER_DISTRO_LABEL,
-      color: color[3],
       defaultValue:
         100 -
         (siteDetails.siteDistro.fundraiserDistroMin +

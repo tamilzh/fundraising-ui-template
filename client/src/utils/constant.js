@@ -15,7 +15,6 @@ export default {
   ALL_NFT_MODE: 0,
   MY_NFT_MODE: 1,
   BUY_NFT_MODE: 2,
-  color: ["#FF66D7", "#FFFF99", "#2ACFD3", "#FF9B05"],
   priceFilter: [
     {
       id: 0,

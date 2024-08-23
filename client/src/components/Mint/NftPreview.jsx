@@ -2,6 +2,7 @@ import React from "react";
 import Card from "../Card";
 import preview from "../../assets/images/preview.svg";
 import constant from "../../utils/constant";
+import { getThemeConfig } from "../../utils/common";
 
 const NftPreview = ({
   loader,
@@ -11,12 +12,9 @@ const NftPreview = ({
   preset,
   widget,
 }) => {
-  const color = constant.color;
   const card = {
     id: 0,
-    image: (previewLink)
-      ? `${previewLink}`
-      : preview,
+    image: previewLink ? `${previewLink}` : preview,
     name: input.name
       ? `${input.name.approvedName} #${input.name.nextNameNumber}`
       : "",
@@ -28,10 +26,22 @@ const NftPreview = ({
     pieData:
       pieData.length > 0
         ? [
-            { value: pieData[0], color: color[0] },
-            { value: pieData[1], color: color[1] },
-            { value: pieData[2], color: color[2] },
-            { value: pieData[3], color: color[3] },
+            {
+              value: Math.round(pieData[0]),
+              color: getThemeConfig().DISTRO_COLOR.beneficiary,
+            },
+            {
+              value: Math.round(pieData[1]),
+              color: getThemeConfig().DISTRO_COLOR.artist,
+            },
+            {
+              value: Math.round(pieData[2]),
+              color: getThemeConfig().DISTRO_COLOR.sponsor,
+            },
+            {
+              value: Math.round(pieData[3]),
+              color: getThemeConfig().DISTRO_COLOR.seller,
+            },
           ]
         : [],
   };
@@ -49,12 +59,18 @@ const NftPreview = ({
   return (
     <React.Fragment>
       <h3
-        className={widget === "final" ? "mint-preview__title final" : "mint-preview__title"}
-        style={{ color: "var(--web-primary-color)"}}
+        className={
+          widget === "final"
+            ? "mint-preview__title final"
+            : "mint-preview__title"
+        }
+        style={{ color: "var(--web-primary-color)" }}
       >
         {card.name ? card.name : constant.NEW_NAME}
       </h3>
-      <div className={widget === "final" ? "mint-card final" : "mint-card"}>{renderContent()}</div>
+      <div className={widget === "final" ? "mint-card final" : "mint-card"}>
+        {renderContent()}
+      </div>
     </React.Fragment>
   );
 };

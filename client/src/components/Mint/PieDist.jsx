@@ -1,9 +1,8 @@
 import React from "react";
 import { PieChart } from "react-minimal-pie-chart";
-import constant from "../../utils/constant";
+import { getThemeConfig } from "../../utils/common";
 
 const PieDist = ({ pieData, preset, sliders, previewLink }) => {
-  const color = constant.color;
   const renderContent = () => {
     if (preset.length > 0) {
       return (
@@ -16,10 +15,10 @@ const PieDist = ({ pieData, preset, sliders, previewLink }) => {
                 data={
                   pieData.length > 0
                     ? [
-                        { value: Math.round(pieData[0]), color: color[0] },
-                        { value: Math.round(pieData[1]), color: color[1] },
-                        { value: Math.round(pieData[2]), color: color[2] },
-                        { value: Math.round(pieData[3]), color: color[3] },
+                        { value: Math.round(pieData[0]), color: getThemeConfig().DISTRO_COLOR.beneficiary },
+                        { value: Math.round(pieData[1]), color: getThemeConfig().DISTRO_COLOR.artist },
+                        { value: Math.round(pieData[2]), color: getThemeConfig().DISTRO_COLOR.sponsor },
+                        { value: Math.round(pieData[3]), color: getThemeConfig().DISTRO_COLOR.seller },
                       ]
                     : []
                 }
@@ -38,7 +37,7 @@ const PieDist = ({ pieData, preset, sliders, previewLink }) => {
                   <div key={slider.name} className="pie-label__wrapper">
                     <div
                       className="pie-label__color-box"
-                      style={{ backgroundColor: slider.color }}
+                      style={{ backgroundColor: getThemeConfig().DISTRO_COLOR[slider.category.replace("fundraiser", "sponsor")] }}
                     ></div>
                     <span className="pie-label">{slider.name}</span>
                   </div>

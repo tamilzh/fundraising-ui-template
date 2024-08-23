@@ -91,25 +91,21 @@ const constructNftMetadata = async (nft, owner) => {
         value: metadata.presetDistribution
           ? metadata.presetDistribution.beneficiaryDistro / 100
           : 0,
-        color: color[0],
       },
       {
         value: metadata.presetDistribution
           ? metadata.presetDistribution.artistDistro / 100
           : 0,
-        color: color[1],
       },
       {
         value: metadata.presetDistribution
           ? metadata.presetDistribution.sponsorDistro / 100
           : 0,
-        color: color[2],
       },
       {
         value: metadata.presetDistribution
           ? metadata.presetDistribution.sellerDistro / 100
           : 0,
-        color: color[3],
       },
     ],
     distPresetName: metadata.presetDistribution

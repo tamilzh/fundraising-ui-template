@@ -145,16 +145,20 @@ export const getThemeConfig = () => {
     APP_TWITTER_LINK: "",
     APP_FUNDRAISIN_WEBSITE_LINK: "https://fundraisin.app",
     APP_PURPOSE: "",
+    DISTRO_COLOR: {
+      beneficiary: "#FF66D7",
+      artist: "#FFFF99",
+      sponsor: "#2ACFD3",
+      seller: "#FF9B05",
+    }
   };
 
   try {
     const theme = sessionStorage.getItem('THEME');
     const data = JSON.parse(theme);
-    console.log('THEME')
     return { ...defaultSetting, ...data };
   } catch (err) {
     console.log('THEME',err)
-
   }
   return defaultSetting;
 };

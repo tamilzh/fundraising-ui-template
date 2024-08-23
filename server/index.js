@@ -65,7 +65,13 @@ app.get("/configuration", async (req, res) => {
     "APP_DISCORD_LINK": config?.ct_social_link_2,
     "APP_TWITTER_LINK": config?.ct_social_link_1,
     "APP_FUNDRAISIN_WEBSITE_LINK": "https://fundraisin.app",
-    "APP_PURPOSE": config?.purpose
+    "APP_PURPOSE": config?.purpose,
+    "DISTRO_COLOR": {
+      beneficiary:  config?.beneficiary_color,
+      artist:  config?.artist_color,
+      sponsor:  config?.sponsor_color,
+      seller:  config?.seller_color,
+    }
   });
 });
 app.get("/constants", async (req, res) => {

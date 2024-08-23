@@ -1,7 +1,7 @@
 import { logInfo } from "./log";
 
-console.log(process.env)
-export const BASE_API = process.env.REACT_APP_BASE_API || window.location.origin;
+export const BASE_API =
+  process.env.REACT_APP_BASE_API || window.location.origin;
 const getConstants = async () => {
   const response = await fetch(`${BASE_API}/constants`);
   const data = await response.json();
@@ -172,15 +172,10 @@ const getTotalMinted = async () => {
 };
 
 const getWebsiteConfig = async () => {
-  const themeExists = sessionStorage.getItem("THEME");
-  if (!themeExists) {
-    const response = await fetch(`${BASE_API}/configuration`);
-    const data = await response.json();
-    sessionStorage.setItem("THEME", JSON.stringify(data));
-    return data;
-  } else {
-    return themeExists;
-  }
+  const response = await fetch(`${BASE_API}/configuration`);
+  const data = await response.json();
+  sessionStorage.setItem("THEME", JSON.stringify(data));
+  return data;
 };
 
 export {

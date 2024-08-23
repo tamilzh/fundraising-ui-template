@@ -22,8 +22,7 @@ export default {
     "event Buy(address indexed,address,uint256,uint256,address,uint256,string)",
   ALL_NFT_MODE: 0,
   MY_NFT_MODE: 1,
-  BUY_NFT_MODE: 2,
-  color: ["#FF66D7", "#FFFF99", "#2ACFD3", "#FF9B05"],
+  BUY_NFT_MODE: 2,  
   priceFilter: [
     {
       id: 0,
