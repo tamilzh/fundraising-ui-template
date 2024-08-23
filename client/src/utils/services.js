@@ -1,7 +1,7 @@
 import { logInfo } from "./log";
 
 console.log(process.env)
-export const BASE_API = process.env.BASE_API || window.location.origin;
+export const BASE_API = process.env.REACT_APP_BASE_API || window.location.origin;
 const getConstants = async () => {
   const response = await fetch(`${BASE_API}/constants`);
   const data = await response.json();
