@@ -7,28 +7,5 @@
   "routes": [
     { "src": "/api/(.*)", "dest": "server/index.js" },
     { "src": "/(.*)", "dest": "client/$1" }
-  ],
-  "env": {},
-  "functions": {
-    "server/index.js": {
-      "env": {
-        "APP_SITE_ID": "5",
-        "APP_WEBSITE_LINK": "https://fundraising-ui-template-client.vercel.app",
-        "IMAGE_CONTENT_TYPE": "",
-        "IMAGE_TYPE": "",
-        "CONTRACT_ADDRESS_FUNDRAISIN": "0xbfe8604f26C825Db140CA1beAe1E6d81AE9eD623",
-        "CONTRACT_ADDRESS_RARITY": "0xfC6d519a6c653495fc11d71828723f0F2b30A809",
-        "CONTRACT_ADDRESS_SITE": "0x079118268F9071A969ab893B8C1c9c9F3F215210",
-        "CONTRACT_ADDRESS_ARTIST": "0x70aFCA14142272dEc97570dE18139Ad8fa34A7e7",
-        "NETWORK_URL": "https://api.avax-test.network/ext/bc/C/rpc"
-      }
-    }
-  },
-  "build": {
-    "env": {
-      "REACT_APP_TITLE": "Fund Raisin - Collection",
-      "REACT_APP_DESRIPTION": "A Fund Raisin #AwardNFTs from the Collection",
-      "REACT_APP_BASE_API": "http://localhost:8080"
-    }
-  }
+  ]
 }
