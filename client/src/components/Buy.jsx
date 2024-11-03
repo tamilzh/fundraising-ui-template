@@ -18,6 +18,8 @@ import Loader from "./Loader";
 import Pagination from "../components/Pagination";
 import { useMemo } from "react";
 import { useParams } from "react-router-dom";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowUp, faArrowDown } from '@fortawesome/free-solid-svg-icons';
 
 const Buy = () => {
   const [
@@ -35,6 +37,7 @@ const Buy = () => {
     buyNftData,
     buyLoading,
     filterData,
+    webPrimaryColor
   ] = useOutletContext();
   const { tokenId } = useParams();
   const loading = buyLoading;
@@ -504,6 +507,7 @@ const Buy = () => {
                     showList={isListOpen}
                     onUpdate={filterDropdown}
                     onToggle={toggleList}
+                    webPrimaryColor={webPrimaryColor}
                   />
                 ) : item.filterType === "textbox" ? (
                   <>
@@ -557,11 +561,15 @@ const Buy = () => {
                   onClick={() => sortFilter(item)}
                 >
                   <span className="sort__btn-text">{item.header}</span>
-                  <img
-                    src={item.direction === "up" ? arrow_up : arrow_down}
-                    alt="down"
-                    className="chevron-down"
-                  ></img>
+                  <FontAwesomeIcon
+                    icon={
+                      item.direction === "up"
+                        ? faArrowUp
+                        : faArrowDown
+                    }
+                    color={webPrimaryColor}
+                    size="xl"
+                  />
                 </div>
               </div>
             ))}

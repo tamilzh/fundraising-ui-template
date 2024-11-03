@@ -11,11 +11,11 @@ import network from "./api/network.js";
 import bodyParser from "body-parser";
 import { getWebsiteConfig } from "./utils/services.js";
 import constant from "./utils/constant.js";
-/*import path from "path";
-import * as url from "url";
+// import path from "path";
+// import * as url from "url";
 
-const __dirname = url.fileURLToPath(new URL("..", import.meta.url));
- */
+// const __dirname = url.fileURLToPath(new URL("..", import.meta.url));
+
 const PORT = process.env.PORT || 8080;
 const app = express();
 

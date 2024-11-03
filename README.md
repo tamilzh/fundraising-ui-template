@@ -13,13 +13,13 @@ Clone the repository `git@gitlab-server.red.dev:nft-project/catdrop.git`
 
 # Create .env files
 
-1. Create .env file under clinet folder and keep the folllowing
+1. Create .env file under client folder and keep the folllowing
 
     REACT_APP_TITLE="Fund Raisin - Collection"
 
     REACT_APP_DESRIPTION="A Fund Raisin #AwardNFTs from the Collection"
 
-    REACT_APP_BASE_API="https://localhost:8080"
+    REACT_APP_BASE_API="http://localhost:8080"
 
 2. Create .env file root of the project folder and keep the below
 

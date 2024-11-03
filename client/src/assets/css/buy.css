@@ -45,6 +45,14 @@
     border: 1px solid var(--web-primary-color);
     border-radius: 20px;
     cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dropdown-header-cont {
+    display: flex;
+    align-items: center;
 }
 
 .dropdown__bottom {
@@ -172,6 +180,12 @@
     border-radius: 20px;
     cursor: pointer;
     background-color: transparent;
+}
+
+.sort__btn-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .filter__btn,

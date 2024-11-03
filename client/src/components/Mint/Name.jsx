@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import chevron_down_dark from "../../assets/images/chevron_down_dark.svg";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 
 const Name = ({
   nameList,
@@ -7,6 +9,7 @@ const Name = ({
   selectedItems,
   title,
   rarityList,
+  webPrimaryColor
 }) => {
   const [isListOpen, setList] = useState(false);
   const [name, setName] = useState(
@@ -121,11 +124,9 @@ const Name = ({
               {/* {getRare(selectedItems.name)} */}
             </span>
           </div>
-          <img
-            src={chevron_down_dark}
-            alt="down"
-            className="chevron-down"
-          ></img>
+          <div className="chevron-down">
+            <FontAwesomeIcon icon={faChevronDown} color={webPrimaryColor} size='xl' />
+          </div>
         </div>
         <div
           className={`nft-name__dropdown-bottom ${

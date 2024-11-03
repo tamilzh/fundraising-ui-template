@@ -3,11 +3,16 @@ import sharp from "sharp";
 import fs from "fs";
 import { upload, fund } from "../arweave-bundlr/index.js";
 import request from "request";
+import Jimp from "jimp";
 import { v4 as uuidv4 } from "uuid";
 import jsdom from "jsdom";
 import constant from "../utils/constant.js";
 const { JSDOM } = jsdom;
 const routes = express();
+import path from "path";
+import * as url from "url";
+
+const __dirname = url.fileURLToPath(new URL("..", import.meta.url));
 
 const changeColor = (info, destFile) => {
   const dom = new JSDOM(`<!DOCTYPE html><body></body></html>`);
@@ -130,7 +135,7 @@ const constructTokenURI = async (image, nftMetadata) => {
 const uploadFileToArweave = async (finalNFTimage) => {
   const { data, file } = finalNFTimage;
 
-  const srcFile = "server/preview.svg";
+  const srcFile = `${__dirname}/preview.svg`;
   const destFile = `/tmp/${file}`;
   const originalFile = `/tmp/${file}.${constant.IMAGE_TYPE}`;
 
@@ -171,30 +176,52 @@ routes.post("/preview", async (req, res) => {
   const { data, file, preview = true } = req.body;
   try {
     if (data.length > 0) {
-      const srcFile = "server/preview.svg";
-      const destFile = `/tmp/${file}`;
-      const layers = await processingImage(data, srcFile, destFile, preview);
-      const buffer = await sharp(destFile)
-        .composite(layers)
-        .resize({
-          fit: sharp.fit.contain,
-          width: 400,
-          height: 400,
-          background: { r: 255, g: 255, b: 255, alpha: 1 },
-        })
-        .toBuffer();
+      let srcFile = `${__dirname}/preview.svg`;
+      let destFile = `/tmp/${file}.svg`;
+
+      fs.copyFileSync(srcFile, destFile);
+
+      let layers = [];
+
+      for (let i = 0; i < data.length; i++) {
+        if (data[i].type === "color") {
+          changeColor(data[i], destFile);
+        } 
+        else {
+          const layerName = `/tmp/artist-${data[i].name}`;
+          let convertedLayerName = `/tmp/converted-artist-${data[i].name}`
+
+          await downloadFile(data[i].value, layerName);
+          const fileExtension = path.extname(data[i].value).toLowerCase();
+        
+          // convert image to png only if the extensions are jpg or jpeg
+          if (fileExtension === '.jpg' || fileExtension === '.jpeg') {
+            const image = await Jimp.read(data[i].value);
+            await image.writeAsync(convertedLayerName);
+            console.log('Image converted successfully to PNG format.');
+          } else {
+            convertedLayerName = layerName
+            console.log('File is not a JPG/JPEG, skipping conversion.');
+          }
+    
+          const resizedLayer = await sharp(convertedLayerName)
+            .resize(2500, 2500, {
+              fit: sharp.fit.contain,
+              // withoutEnlargement: true // Prevents upscaling if the image is smaller
+            })
+            .toBuffer();
+          layers.push({
+            input: resizedLayer,
+          });
+        }
+      }
+      
+      let buffer = await sharp(destFile).toBuffer()
+      buffer = await sharp(buffer).composite(layers).toBuffer()
+      buffer = await sharp(buffer).resize(2500, 2500).toBuffer()
       fs.unlinkSync(destFile);
-      layers.map((file) =>  fs.unlinkSync(file.input));
-      /*await sharp(destFile)
-        .composite(layers)
-        .resize({ fit: sharp.fit.contain, width: 900, height: 900 })
-        .png()
-        .toFile(`/tmp/${file}.png`);*/
-      //await sharp(destFile).composite(layers).resize({fit: sharp.fit.contain, width: 900, height: 900 }).png().toFile(`/tmp/preview.png`)
-      //let buffer = await sharp(`/tmp/PATTERN-01.jpg`).composite([{input: `/tmp/LAYER-01.png`}]).toBuffer();//.toFile(`/tmp/FINAL.png`)
-      //const filename = `HEART_BLUE.png`;
-      //await sharp(`/tmp/${filename}`).extract({ left: 3901, top: 300, width: 550, height: 550 }).toFile(`/tmp/cropped-${filename}`)
-      res.send(`data:image/jpg;base64,${buffer.toString("base64")}`);
+      console.log("reached here?")
+      res.send(`data:image/png;base64,${buffer.toString("base64")}`);
     }
   } catch (err) {
     console.error(`Error while creating preview ${err}.`);
@@ -209,7 +236,7 @@ routes.post("/upload", async (req, res) => {
     const tokenUri = await constructTokenURI(image, nftMetadata);
     res.send({ tokenUri });
   } catch (err) {
-    console.error(`Error while creating preview ${err}.`);
+    console.error(`Error while creating upload ${err}.`);
     res.sendStatus(500);
   }
 });

@@ -25,6 +25,11 @@ const Home = () => {
     topLoading,
     ,
     ,
+    ,
+    ,
+    ,
+    webPrimaryColor,
+    ,
   ] = useOutletContext();
 
   if (tokenId !== null) {
@@ -32,7 +37,7 @@ const Home = () => {
   } else {
     return (
       <div>
-        <Hero siteDetails={siteDetails} />
+        <Hero siteDetails={siteDetails} webPrimaryColor={webPrimaryColor} />
         <TopFund
           siteDetails={siteDetails}
           connectWallet={connectWallet}

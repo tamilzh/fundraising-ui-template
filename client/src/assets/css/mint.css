@@ -435,7 +435,7 @@
 
 .mint__btn {
   background-color: white;
-  color: var(--secondary-blue);
+  color: var(--web-primary-color);
   /* border: 1px solid #CBCBCB;
     border-radius: 25px;
     padding: 7px 7px; */
@@ -471,7 +471,7 @@
 }
 
 .mint__btn:disabled {
-  color: var(--secondary-grey);
+  color: #cbcbcb;
   cursor: not-allowed;
 }
 

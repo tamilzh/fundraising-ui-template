@@ -3,6 +3,8 @@ import arrow_left from "../../assets/images/arrow_left.svg";
 import arrow_right from "../../assets/images/arrow_right.svg";
 import arrow_left_grey from "../../assets/images/arrow_left_grey.svg";
 import arrow_right_grey from "../../assets/images/arrow_right_grey.svg";
+import Arrow_Left from "../Arrow_Left"
+import Arrow_Right from "../Arrow_Right"
 
 const MintFooter = ({
   nextHover,
@@ -14,6 +16,7 @@ const MintFooter = ({
   Previous,
   Continue,
   MintNft,
+  webPrimaryColor
 }) => {
   const showPrevious = () => {
     if (stepState) {
@@ -23,7 +26,7 @@ const MintFooter = ({
           onClick={Previous}
         >
           <div className="arrow-group left">
-            <img src={arrow_left} alt="down" className="arrow-left"></img>
+            <Arrow_Left color={webPrimaryColor}/>
             {backButton}
           </div>
         </button>
@@ -44,13 +47,9 @@ const MintFooter = ({
             <div className="arrow-group right">
               {nextButton}
               {!validateSelection() ? (
-                <img
-                  src={arrow_right_grey}
-                  alt="down"
-                  className="arrow-right"
-                ></img>
+                <Arrow_Right color="#cbcbcb" />
               ) : (
-                <img src={arrow_right} alt="down" className="arrow-right"></img>
+                <Arrow_Right color={webPrimaryColor} />
               )}
               
             </div>

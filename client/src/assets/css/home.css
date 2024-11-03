@@ -132,7 +132,7 @@
     font-size: 2.7rem;
     font-weight: 500;
     line-height: 1.2;
-    /* color: var(--web-primary-color); */
+    color: var(--web-primary-color);
     margin-bottom: 4rem;
     margin-right: 3rem;
 }
@@ -140,12 +140,12 @@
 .hero__btn {
     display: inline-block;
     width: 32rem;
-    background-color: var(--secondary-grey);
+    background-color: var(--web-primary-color);
     padding: 1rem 3rem;
     border-radius: 3rem;
     font-size: 2.7rem;
     font-weight: 500;
-    color: var(--web-primary-color);
+    color: white;
     cursor: pointer;
 }
 

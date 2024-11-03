@@ -47,6 +47,11 @@ const Mint = () => {
     ,
     ,
     forceUpdate,
+    ,
+    ,
+    ,
+    webPrimaryColor,
+    ,
   ] = useOutletContext();
   const navigate = useNavigate();
   const [isLoading, setLoading] = useState(true);
@@ -688,6 +693,7 @@ const Mint = () => {
           rarityList={rarityList.filter((i) => {
             return i.rarityType === "approvedname";
           })}
+          webPrimaryColor={webPrimaryColor}
         />
       );
     } else if (artOptions[stepState].widget === "distribution") {
@@ -778,6 +784,7 @@ const Mint = () => {
               Previous={prevStep}
               Continue={nextStep}
               MintNft={openWarnModal}
+              webPrimaryColor={webPrimaryColor}
             />
           </div>
         </div>
@@ -797,6 +804,7 @@ const Mint = () => {
             Previous={prevStep}
             Continue={nextStep}
             MintNft={openWarnModal}
+            webPrimaryColor={webPrimaryColor}
           />
         </div>
       </section>

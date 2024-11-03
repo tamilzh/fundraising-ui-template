@@ -8,9 +8,28 @@ import Image3 from "../../assets/images/hero_nfts/Catdrop3.svg";
 import { useState } from "react";
 import { getTokenOwner } from "../../utils/services";
 import { getThemeConfig }from "../../utils/common";
+import { createSvgUrl } from "../../utils/svgUtils";
+import { useOutletContext } from "react-router-dom";
 
 const Hero = (props) => {
   //const { nftData } = props; for listing top fundraiser
+  const [
+    siteDetails,
+    walletAddress,
+    connectWallet,
+    isWalletConnected,
+    ,
+    ,
+    ,
+    ,
+    ,
+    ,
+    forceUpdate,
+    buyNftData,
+    buyLoading,
+    filterData,
+    webPrimaryColor
+  ] = useOutletContext();
   const [nftData, setNftData] = useState([
     {
       name: "Jennifurr #1",
@@ -38,6 +57,7 @@ const Hero = (props) => {
   const [minutes, setMinutes] = useState(0);
   const [seconds, setSeconds] = useState(0);
   const [campaignStatus, setCampaignStatus] = useState("");
+  const [backgroundImage, setBackgroundImage] = useState("");
   const owner = async () => {
     let newData = nftData;
     for (let index = 0; index < newData.length; index++) {
@@ -104,6 +124,19 @@ const Hero = (props) => {
     }, 1000);
     return () => clearInterval(interval);
   }, []);
+
+  useEffect(() => {
+    const fillColor = webPrimaryColor;
+    const fetchSvg = async () => {
+      const svgContent =
+        '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1919.445" height="425.006" viewBox="0 0 1919.445 425.006"><defs><linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox"><stop offset="0" stop-color="__FILL_COLOR__" stop-opacity="0.522"/><stop offset="1" stop-color="__FILL_COLOR__"/></linearGradient></defs><path id="Nav_s_box_half_circle" data-name="Nav&apos;s box half circle" d="M6330,0V425.006S6502.128,38.346,8248.32,69.371c2.532,2.7,0-69.371,0-69.371H6330" transform="translate(-6330)" opacity="0.22" fill="url(#linear-gradient)"/></svg>';
+      
+        const svgUrl = createSvgUrl(svgContent, fillColor);
+      setBackgroundImage(`url(${svgUrl})`);
+    };
+
+    fetchSvg();
+  }, [webPrimaryColor]);
 
   const [text, setText] = useState();
 
@@ -313,7 +346,7 @@ const Hero = (props) => {
         </div>
       </div>
 
-      <section className="hero">
+      <section className="hero" style={{backgroundImage: backgroundImage}}>
         <div className="hero__desktop">
           <div className="hero__box">
             <div className="hero__box-left">
