@@ -1,0 +1,164 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 300 300">
+  <defs>
+    <style>
+      .octopus-shape {
+        fill: none;
+      }
+
+      .background {
+        fill: #FFA300;
+      }
+
+      .pattern {
+        clip-path: url(#clip-path);
+      }
+
+      .color-1 {
+        fill: #f7f6e8;
+      }
+
+      .color-2 {
+        fill: #efe370;
+      }
+
+      .color-3 {
+        fill: #f2e9a0;
+      }
+
+      .color-4 {
+        fill: #efead0;
+      }
+
+      .color-5 {
+        fill: #efe51d;
+      }
+    </style>
+    <clipPath id="clip-path">
+      <path class="octopus-shape" d="M242.2051,192.68693c-3.95613-1.88921-9.16174-7.60169-12.06435-10.88713-14.05135-15.90444-26.86653-21.65175-35.08513-23.68866,4.46794.10674,10.46475,1.12437,18.36807,4.09547,21.89125,8.22955,38.34716,7.0115,38.34716,7.0115,19.645-.4718,26.30765-23.31819,26.30765-23.31819-5.44321,6.169-14.27661,9.59988-14.27661,9.59988a49.72274,49.72274,0,0,1-39.13777-7.13836c-26.64235-15.87207-36.16114-18.542-39.15-18.92708,39.0434-47.0318,14.38253-82.32219,14.38253-82.32219-16.18877-25.32673-47.86-25.27177-47.86-25.27177-25.10725-1.31232-60.55262,21.00518-58.287,55.79552,1.33209,20.45559,15.5575,45.39655,21.1803,54.53487-6.03811,2.51766-15.6,7.26393-30.58423,16.19065A49.72257,49.72257,0,0,1,45.208,155.4998s-8.83351-3.4309-14.27673-9.59988c0,0,6.66268,22.84639,26.30765,23.31819,0,0,8.7496.62868,21.94738-2.19849a94.96251,94.96251,0,0,0-14.65308,13.013c-2.98134,3.21412-8.32393,8.79879-12.32467,10.59139-7.11835,3.18964-16.80733,3.41277-30.28708-4.68814,0,0,23.263,28.44506,45.9738,11.39883,2.23286-1.676,7.75951-6.4925,9.89857-8.28663,7.29665-6.11943,13.411-11.93277,30.56682-13.53812-5.28139,14.00451-22.67527,46.04794-69.17136,36.07217,0,0,17.5604,19.05807,49.8605,10.25986,0,0,16.76461-5.513,31.56692-26.23668-1.42471,5.55984-2.38456,10.1909-2.38456,10.1909-8.36912,51.36312,23.138,51.36312,23.138,51.36312,21.3453,0,26.91232-20.02016,26.91232-20.02016-10.83064,12.14332-21.86382,9.18963-21.86382,9.18963-12.26889-3.77431-14.27661-16.87735-14.27661-16.87735-3.72358-19.006,9.76264-37.20878,15.04792-43.46709a46.12408,46.12408,0,0,0,6.32351,29.57579,45.16185,45.16185,0,0,0,10.10557,10.32365,65.13652,65.13652,0,0,1,14.50939,12.73233c.29351.34164.57514.69776.84534,1.06459a20.85868,20.85868,0,0,1-.1484,25.27672c-3.46044,4.51773-9.20669,9.08948-18.74785,11.89382,0,0,5.13229,2.38278,12.67525.84792a28.92311,28.92311,0,0,0,22.57135-33.46083c-1.26806-6.66044-4.78923-14.5201-12.30018-23.345,0,0-15.89173-15.60152-15.25411-33.9483,15.78,27.90065,37.07933,34.897,37.07933,34.897,32.30022,8.79821,49.86062-10.25986,49.86062-10.25986-45.79939,9.82619-63.36462-21.12229-68.92858-35.43655,17.60877,1.94582,23.649,7.97252,30.88422,14.34557,2.09505,1.84531,7.50319,6.79448,9.69486,8.52411,22.29079,17.59182,46.23659-10.28093,46.23659-10.28093C258.92475,196.50608,249.244,196.04816,242.2051,192.68693Z"/>
+    </clipPath>
+  </defs>
+  <g id="Layer_2" data-name="Layer 2">
+    <rect class="background" x="-4.82516" y="-4.82516" width="309.65032" height="309.65032"/>
+    <g class="pattern">
+      <g>
+        <rect class="color-1" x="-21.73054" y="24.06644" width="346.15224" height="244.75411" transform="translate(-41.95345 62.85721) rotate(-20.6723)"/>
+        <g>
+          <g>
+            <rect class="color-2" x="-19.0847" y="95.87517" width="26.9478" height="26.9478" transform="translate(-38.96395 5.05973) rotate(-20.6723)"/>
+            <rect class="color-3" x="15.41444" y="110.97363" width="26.9478" height="26.9478" transform="translate(-42.07281 18.21082) rotate(-20.6723)"/>
+            <rect class="color-4" x="50.14039" y="126.67321" width="26.9478" height="26.9478" transform="translate(-45.37928 31.48069) rotate(-20.6723)"/>
+          </g>
+          <g>
+            <rect class="color-5" x="40.63447" y="101.29434" width="26.9478" height="26.9478" transform="translate(-37.03201 26.49086) rotate(-20.6723)"/>
+            <rect class="color-2" x="75.05387" y="116.85533" width="26.9478" height="26.9478" transform="translate(-40.30929 39.64358) rotate(-20.6723)"/>
+            <rect class="color-3" x="109.04354" y="131.72346" width="26.9478" height="26.9478" transform="translate(-43.36964 52.59999) rotate(-20.6723)"/>
+            <rect class="color-4" x="143.76949" y="147.42304" width="26.9478" height="26.9478" transform="translate(-46.67611 65.86986) rotate(-20.6723)"/>
+          </g>
+          <g>
+            <rect class="color-5" x="30.86292" y="76.04946" width="26.9478" height="26.9478" transform="translate(-28.74914 21.41588) rotate(-20.6723)"/>
+            <rect class="color-2" x="65.28232" y="91.61045" width="26.9478" height="26.9478" transform="translate(-32.02642 34.56861) rotate(-20.6723)"/>
+            <rect class="color-3" x="99.78145" y="106.70891" width="26.9478" height="26.9478" transform="translate(-35.13528 47.7197) rotate(-20.6723)"/>
+            <rect class="color-4" x="134.5074" y="122.40849" width="26.9478" height="26.9478" transform="translate(-38.44175 60.98957) rotate(-20.6723)"/>
+          </g>
+          <g>
+            <rect class="color-5" x="125.00149" y="97.02962" width="26.9478" height="26.9478" transform="translate(-30.09448 55.99974) rotate(-20.6723)"/>
+            <rect class="color-2" x="159.42088" y="112.59061" width="26.9478" height="26.9478" transform="translate(-33.37176 69.15246) rotate(-20.6723)"/>
+            <rect class="color-3" x="193.41055" y="127.45874" width="26.9478" height="26.9478" transform="matrix(0.93561, -0.35302, 0.35302, 0.93561, -36.43211, 82.10887)"/>
+            <rect class="color-4" x="228.1365" y="143.15832" width="26.9478" height="26.9478" transform="translate(-39.73858 95.37874) rotate(-20.6723)"/>
+          </g>
+          <g>
+            <rect class="color-2" x="-0.31154" y="145.16232" width="26.9478" height="26.9478" transform="translate(-55.15472 14.86044) rotate(-20.6723)"/>
+            <rect class="color-3" x="34.1876" y="160.26078" width="26.9478" height="26.9478" transform="translate(-58.26358 28.01153) rotate(-20.6723)"/>
+            <rect class="color-4" x="68.91354" y="175.96036" width="26.9478" height="26.9478" transform="translate(-61.57005 41.2814) rotate(-20.6723)"/>
+          </g>
+          <g>
+            <rect class="color-5" x="59.40763" y="150.58149" width="26.9478" height="26.9478" transform="translate(-53.22277 36.29157) rotate(-20.6723)"/>
+            <rect class="color-2" x="93.82702" y="166.14248" width="26.9478" height="26.9478" transform="translate(-56.50005 49.4443) rotate(-20.6723)"/>
+            <rect class="color-3" x="127.81669" y="181.01061" width="26.9478" height="26.9478" transform="translate(-59.56041 62.4007) rotate(-20.6723)"/>
+            <rect class="color-4" x="162.54264" y="196.71019" width="26.9478" height="26.9478" transform="translate(-62.86688 75.67057) rotate(-20.6723)"/>
+          </g>
+          <g>
+            <rect class="color-2" x="97.03534" y="22.77159" width="26.9478" height="26.9478" transform="translate(-5.68032 41.34594) rotate(-20.6723)"/>
+            <rect class="color-3" x="131.53448" y="37.87005" width="26.9478" height="26.9478" transform="translate(-8.78918 54.49703) rotate(-20.6723)"/>
+            <rect class="color-4" x="166.26043" y="53.56963" width="26.9478" height="26.9478" transform="translate(-12.09565 67.7669) rotate(-20.6723)"/>
+          </g>
+          <g>
+            <rect class="color-5" x="156.75451" y="28.19076" width="26.9478" height="26.9478" transform="translate(-3.74838 62.77707) rotate(-20.6723)"/>
+            <rect class="color-2" x="191.1739" y="43.75175" width="26.9478" height="26.9478" transform="translate(-7.02566 75.92979) rotate(-20.6723)"/>
+            <rect class="color-3" x="225.16357" y="58.61988" width="26.9478" height="26.9478" transform="translate(-10.08601 88.8862) rotate(-20.6723)"/>
+            <rect class="color-4" x="259.88952" y="74.31946" width="26.9478" height="26.9478" transform="translate(-13.39248 102.15607) rotate(-20.6723)"/>
+          </g>
+          <g>
+            <rect class="color-5" x="146.98295" y="2.94588" width="26.9478" height="26.9478" transform="translate(4.53449 57.70209) rotate(-20.6723)"/>
+            <rect class="color-2" x="181.40235" y="18.50687" width="26.9478" height="26.9478" transform="translate(1.25721 70.85482) rotate(-20.6723)"/>
+            <rect class="color-3" x="215.90149" y="33.60533" width="26.9478" height="26.9478" transform="translate(-1.85165 84.00591) rotate(-20.6723)"/>
+            <rect class="color-4" x="250.62744" y="49.30491" width="26.9478" height="26.9478" transform="translate(-5.15812 97.27578) rotate(-20.6723)"/>
+          </g>
+          <g>
+            <rect class="color-5" x="241.12152" y="23.92604" width="26.9478" height="26.9478" transform="translate(3.18916 92.28595) rotate(-20.6723)"/>
+            <rect class="color-2" x="275.54092" y="39.48703" width="26.9478" height="26.9478" transform="translate(-0.08812 105.43867) rotate(-20.6723)"/>
+          </g>
+          <g>
+            <rect class="color-5" x="81.38909" y="56.49775" width="26.9478" height="26.9478" transform="translate(-18.5938 37.99393) rotate(-20.6723)"/>
+            <rect class="color-2" x="115.80849" y="72.05874" width="26.9478" height="26.9478" transform="translate(-21.87108 51.14665) rotate(-20.6723)"/>
+            <rect class="color-3" x="150.30763" y="87.1572" width="26.9478" height="26.9478" transform="translate(-24.97995 64.29774) rotate(-20.6723)"/>
+            <rect class="color-4" x="185.03358" y="102.85678" width="26.9478" height="26.9478" transform="translate(-28.28642 77.56761) rotate(-20.6723)"/>
+          </g>
+          <g>
+            <rect class="color-5" x="175.52766" y="77.47791" width="26.9478" height="26.9478" transform="translate(-19.93914 72.57778) rotate(-20.6723)"/>
+            <rect class="color-2" x="209.94706" y="93.0389" width="26.9478" height="26.9478" transform="translate(-23.21642 85.73051) rotate(-20.6723)"/>
+            <rect class="color-3" x="243.93672" y="107.90703" width="26.9478" height="26.9478" transform="translate(-26.27678 98.68691) rotate(-20.6723)"/>
+            <rect class="color-4" x="278.66267" y="123.60661" width="26.9478" height="26.9478" transform="translate(-29.58325 111.95678) rotate(-20.6723)"/>
+          </g>
+          <rect class="color-4" x="281.13679" y="207.05647" width="26.9478" height="26.9478" transform="translate(-58.88364 118.20314) rotate(-20.6723)"/>
+          <g>
+            <rect class="color-2" x="256.22332" y="216.87436" width="26.9478" height="26.9478" transform="translate(-63.95363 110.04025) rotate(-20.6723)"/>
+            <rect class="color-3" x="222.23365" y="202.00623" width="26.9478" height="26.9478" transform="translate(-60.89328 97.08384) rotate(-20.6723)"/>
+            <rect class="color-4" x="187.5077" y="186.30665" width="26.9478" height="26.9478" transform="translate(-57.58681 83.81397) rotate(-20.6723)"/>
+          </g>
+          <g>
+            <rect class="color-3" x="231.49573" y="227.02077" width="26.9478" height="26.9478" transform="translate(-69.12764 101.96413) rotate(-20.6723)"/>
+            <rect class="color-4" x="196.76978" y="211.32119" width="26.9478" height="26.9478" transform="translate(-65.82117 88.69426) rotate(-20.6723)"/>
+          </g>
+          <g>
+            <rect class="color-5" x="206.13613" y="236.33016" width="26.9478" height="26.9478" transform="translate(-74.04685 93.611) rotate(-20.6723)"/>
+            <rect class="color-2" x="171.33204" y="220.91432" width="26.9478" height="26.9478" transform="translate(-70.84558 80.33182) rotate(-20.6723)"/>
+            <rect class="color-3" x="137.72707" y="205.90104" width="26.9478" height="26.9478" transform="translate(-67.70921 67.50187) rotate(-20.6723)"/>
+            <rect class="color-4" x="103.00112" y="190.20146" width="26.9478" height="26.9478" transform="translate(-64.40275 54.232) rotate(-20.6723)"/>
+          </g>
+          <g>
+            <rect class="color-3" x="297.08959" y="173.4689" width="26.9478" height="26.9478" transform="translate(-45.99934 121.6723) rotate(-20.6723)"/>
+            <rect class="color-4" x="262.36364" y="157.76932" width="26.9478" height="26.9478" transform="translate(-42.69287 108.40243) rotate(-20.6723)"/>
+          </g>
+          <g>
+            <rect class="color-5" x="271.86956" y="183.14819" width="26.9478" height="26.9478" transform="translate(-51.04015 113.39226) rotate(-20.6723)"/>
+            <rect class="color-2" x="237.45016" y="167.58721" width="26.9478" height="26.9478" transform="translate(-47.76287 100.23953) rotate(-20.6723)"/>
+            <rect class="color-3" x="203.4605" y="152.71908" width="26.9478" height="26.9478" transform="translate(-44.70251 87.28312) rotate(-20.6723)"/>
+            <rect class="color-4" x="168.73455" y="137.0195" width="26.9478" height="26.9478" transform="translate(-41.39605 74.01326) rotate(-20.6723)"/>
+          </g>
+          <g>
+            <rect class="color-3" x="106.11361" y="275.1098" width="26.9478" height="26.9478" transform="translate(-94.17691 60.79763) rotate(-20.6723)"/>
+            <rect class="color-4" x="71.38766" y="259.41023" width="26.9478" height="26.9478" transform="translate(-90.87044 47.52776) rotate(-20.6723)"/>
+          </g>
+          <rect class="color-4" x="80.64975" y="284.42477" width="26.9478" height="26.9478" transform="translate(-99.1048 52.40805) rotate(-20.6723)"/>
+          <rect class="color-2" x="55.73627" y="294.24266" width="26.9478" height="26.9478" transform="translate(-104.1748 44.24515) rotate(-20.6723)"/>
+          <g>
+            <rect class="color-3" x="180.82441" y="246.18779" width="26.9478" height="26.9478" transform="translate(-79.15652 85.31008) rotate(-20.6723)"/>
+            <rect class="color-4" x="146.24361" y="230.8729" width="26.9478" height="26.9478" transform="translate(-75.9765 72.11622) rotate(-20.6723)"/>
+          </g>
+          <g>
+            <rect class="color-5" x="155.74953" y="256.25177" width="26.9478" height="26.9478" transform="translate(-84.32378 77.10605) rotate(-20.6723)"/>
+            <rect class="color-2" x="121.33013" y="240.69078" width="26.9478" height="26.9478" transform="translate(-81.0465 63.95332) rotate(-20.6723)"/>
+            <rect class="color-3" x="87.34046" y="225.82265" width="26.9478" height="26.9478" transform="translate(-77.98615 50.99691) rotate(-20.6723)"/>
+            <rect class="color-4" x="52.61451" y="210.12307" width="26.9478" height="26.9478" transform="translate(-74.67968 37.72705) rotate(-20.6723)"/>
+          </g>
+          <g>
+            <rect class="color-3" x="27.80764" y="219.01264" width="26.9478" height="26.9478" transform="translate(-79.41509 29.54202) rotate(-20.6723)"/>
+            <rect class="color-4" x="-6.91831" y="203.31306" width="26.9478" height="26.9478" transform="translate(-76.10862 16.27215) rotate(-20.6723)"/>
+          </g>
+          <rect class="color-5" x="36.89187" y="244.12026" width="26.9478" height="26.9478" transform="translate(-87.69376 34.36551) rotate(-20.6723)"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
