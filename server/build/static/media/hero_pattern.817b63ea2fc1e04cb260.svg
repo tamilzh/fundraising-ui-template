@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1919.445" height="425.006" viewBox="0 0 1919.445 425.006">
-  <defs>
-    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
-      <stop offset="0" stop-color="#D2D2E9" stop-opacity="0.522"/>
-      <stop offset="1" stop-color="#D2D2E9"/>
-    </linearGradient>
-  </defs>
-  <path id="Nav_s_box_half_circle" data-name="Nav&apos;s box half circle" d="M6330,0V425.006S6502.128,38.346,8248.32,69.371c2.532,2.7,0-69.371,0-69.371H6330" transform="translate(-6330)" opacity="0.22" fill="url(#linear-gradient)"/>
-</svg>
