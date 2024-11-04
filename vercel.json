@@ -1,21 +1,11 @@
 {
   "version": 2,
   "builds": [
-    { "src": "server/index.js", "use": "@vercel/node" }
+    { "src": "server/index.js", "use": "@vercel/node" },
+    { "src": "client/package.json", "use": "@vercel/static-build", "config": { "distDir": "build" } }
   ],
   "routes": [
-    { "src": "/(.*)", "dest": "server/index.js" }
-  ],
-  "env": {
-    "APP_SITE_ID": "5",
-    "CONTRACT_ADDRESS_ARTIST": "0x70aFCA14142272dEc97570dE18139Ad8fa34A7e7",
-    "CONTRACT_ADDRESS_SITE": "0x079118268F9071A969ab893B8C1c9c9F3F215210",
-    "CONTRACT_ADDRESS_RARITY": "0xfC6d519a6c653495fc11d71828723f0F2b30A809",
-    "CONTRACT_ADDRESS_FUNDRAISIN": "0xbfe8604f26C825Db140CA1beAe1E6d81AE9eD623",
-    "IMAGE_TYPE": "",
-    "IMAGE_CONTENT_TYPE": "",
-    "APP_WEBSITE_LINK": "https://fundraising-ui-template-client.vercel.app",
-    "NETWORK_URL": "https://api.avax-test.network/ext/bc/C/rpc",
-    "CI": "false"
-  }
+    { "src": "/api/(.*)", "dest": "server/index.js" },
+    { "src": "/(.*)", "dest": "client/$1" }
+  ]
 }

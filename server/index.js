@@ -11,18 +11,17 @@ import network from "./api/network.js";
 import bodyParser from "body-parser";
 import { getWebsiteConfig } from "./utils/services.js";
 import constant from "./utils/constant.js";
-import path from "path";
+/*import path from "path";
 import * as url from "url";
 
 const __dirname = url.fileURLToPath(new URL("..", import.meta.url));
-
+ */
 const PORT = process.env.PORT || 8080;
 const app = express();
 
 app.use(cors());
 app.use(bodyParser.json({ limit: "50mb" }));
 app.use(bodyParser.urlencoded({ limit: "50mb", extended: true }));
-app.use(express.static(path.join(__dirname, '../client/build')));
 
 app.get("/health", function (req, res) {
   res.send(process.env);
@@ -87,10 +86,9 @@ app.get("/constants", async (req, res) => {
   });
 });
 
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../client/build', 'index.html'));
+app.use("/", (req, res) => {
+  res.send("server is  running");
 });
-
 
 app.listen(PORT, async () => {
   console.log(`${process.env.NODE_ENV} server listening on ${PORT}`);
