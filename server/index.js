@@ -11,11 +11,11 @@ import network from "./api/network.js";
 import bodyParser from "body-parser";
 import { getWebsiteConfig } from "./utils/services.js";
 import constant from "./utils/constant.js";
-/*import path from "path";
+import path from "path";
 import * as url from "url";
 
-const __dirname = url.fileURLToPath(new URL("..", import.meta.url));
- */
+const __dirname = url.fileURLToPath(new URL(".", import.meta.url));
+
 const PORT = process.env.PORT || 8080;
 const app = express();
 
@@ -23,7 +23,7 @@ app.use(cors());
 app.use(bodyParser.json({ limit: "50mb" }));
 app.use(bodyParser.urlencoded({ limit: "50mb", extended: true }));
 
-app.get("/health", function (req, res) {
+app.use("/health", function (req, res) {
   res.send(process.env);
 });
 
@@ -86,8 +86,24 @@ app.get("/constants", async (req, res) => {
   });
 });
 
-app.use("/", (req, res) => {
-  res.send("server is  running");
+app.get("/", (req, res) => {
+  res.send("server is started running");
+});
+
+
+/*const root = path.join(__dirname,"build");
+app.use(express.static(root, { lastModified: false, etag: false }));
+
+app.get("*", function (req, res) {
+  res.sendFile("index.html");
+});*/
+
+// Serve static files from the current directory (server folder)
+app.use(express.static(__dirname));
+
+// Handle all other routes by returning index.html located in the same directory
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "build/index.html")); // Serve index.html from the server directory
 });
 
 app.listen(PORT, async () => {
