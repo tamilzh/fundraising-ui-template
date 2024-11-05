@@ -1,12 +1,18 @@
 {
   "version": 2,
   "builds": [
-    { "src": "client/package.json", "use": "@vercel/static-build", "config": { "distDir": "build" } }
+    {
+      "src": "client/package.json",
+      "use": "@vercel/static-build",
+      "config": { "distDir": "build" }
+    }
   ],
-  "routes": [
-    { "src": "/(.*)", "dest": "client/$1" }
-  ],
+  "routes": [{ "src": "/(.*)", "dest": "client/$1" }],
   "env": {
-    "CI": "false"
+    "CI": "false",
+    "REACT_APP_TITLE": "Fund Raisin - Collection",
+    "REACT_APP_DESRIPTION": "A Fund Raisin #AwardNFTs from the Collection",
+    "REACT_APP_BASE_API": "http://localhost:8080",
+    "REACT_APP_PUBLIC_ID": "f47ac10b-58cc-4372-a567-0e02b2c3d479"
   }
 }
