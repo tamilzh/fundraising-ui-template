@@ -1,8 +1,6 @@
 import React, { useState, useEffect, useLayoutEffect } from "react";
 import Card from "./Card";
 import DropDown from "./DropDown";
-import arrow_down from "../assets/images/arrow_down.svg";
-import arrow_up from "../assets/images/arrow_up.svg";
 import Modal from "./Modal/Modal";
 import Popup from "./Modal/Popup";
 import PiePopup from "./Modal/PiePopup";
@@ -58,7 +56,6 @@ const Buy = () => {
   const [boxDisplay, setBoxDisplay] = useState(false);
   const [owner, setOwner] = useState("");
   const [isInputOpen, setInputOpen] = useState(false);
-  const [selectedShow, setSelectedShow] = useState(1);
   //cards state variable
   const [nftData, setNftData] = useState([]);
   const [filteredCards, setFilteredCards] = useState([]);
@@ -171,7 +168,6 @@ const Buy = () => {
 
   // Filter Dropdown options
   const filterDropdown = (item, menu) => {
-    setSelectedShow(0);
     let fCards = [];
     switch (menu.key) {
       case "price":
@@ -235,7 +231,6 @@ const Buy = () => {
     setPriceHeader("Price");
     setList(false);
     setBoxDisplay(false);
-    setSelectedShow(1);
     setPage(1);
   }
   // Show all the nfts
@@ -246,30 +241,10 @@ const Buy = () => {
   };
 
   // Show all the nfts
-  const filterMine = () => {
-    resetfilters()
-    setSelectedShow(2);
-    const fCards = nftData.filter(
-      (card) => card.currentOwner === walletAddress
-    );
-    setFilteredCards(fCards);
-  };
 
   // Show all the nfts
-  const filterForSale = () => {
-    resetfilters()
-    setSelectedShow(3);
-    const fCards = nftData.filter((card) => card.forSale);
-    setFilteredCards(fCards);
-  };
 
   // Show all the nfts
-  const filterNotForSale = () => {
-    resetfilters()
-    setSelectedShow(4);
-    const fCards = nftData.filter((card) => !card.forSale);
-    setFilteredCards(fCards);
-  };
 
   // Update the selected button in filters
   const updateSelectedFilter = (id) => {

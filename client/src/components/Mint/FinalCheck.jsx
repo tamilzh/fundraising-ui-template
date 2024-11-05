@@ -182,7 +182,7 @@ const FinalCheck = ({
                         </tr>
                         <tr >
                           <td>
-                            <div className={getRareInfo(option.identifier) == undefined ? "" : "table-rare-bg"}>
+                            <div className={getRareInfo(option.identifier) === undefined ? "" : "table-rare-bg"}>
                               <span className="table-rare-text" dangerouslySetInnerHTML={{
                               __html: getRareInfo(option.identifier),
                             }}></span>

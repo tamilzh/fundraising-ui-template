@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from "react";
 import { Outlet } from "react-router-dom";
 import Header from "./components/Template/Header";
@@ -10,7 +11,7 @@ import { logError, logInfo } from "./utils/log";
 import Modal from "./components/Modal/Modal";
 import Popup from "./components/Modal/Popup";
 import Error from "./components/Modal/Error";
-import { browserName, isAndroid, isIOS } from "react-device-detect";
+import { browserName } from "react-device-detect";
 import {
   getConstants,
   isApproved,
@@ -103,7 +104,7 @@ const App = () => {
 
   const checkBrowser = () => {
     // Brave also returns as chrome
-    if (browserName == "Firefox") {
+    if (browserName === "Firefox") {
       // if (!["chrome"].includes(browserName.toLowerCase())) {
       let errorMsg =
         "Fund Raisin sites are currently only supported on Chrome and Brave browsers on desktop and in Metamask browser on moblie.";
@@ -230,7 +231,7 @@ const App = () => {
       });
     }
     loadContracts();
-  }, []);
+  }, [checkBrowser, loadContracts, updateWalletAddress]);
 
   useEffect(() => {
     getNftData();

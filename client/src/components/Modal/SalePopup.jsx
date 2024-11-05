@@ -15,14 +15,13 @@ const SalePopup = ({
   const [activePrice, setActivePrice] = useState(card.originalPrice);
 
   const handleChange = (aa) => {
-    const regex = /^\d+(?:\.\d{0,2})$/;
     onChangePrice(aa);
     setActivePrice(aa);
   };
 
   useEffect(() => {
     setActivePrice(card.originalPrice);
-  }, [show]);
+  }, [card.originalPrice, show]);
 
   return (
     <div className="salepopup">

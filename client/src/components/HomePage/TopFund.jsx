@@ -13,7 +13,6 @@ import Error from "../Modal/Error";
 import Spinner from "../Spinner";
 import Slider from "react-slick";
 import SimpleCard from "../SimpleCard";
-import { constants } from "ethers";
 import constant from "../../utils/constant";
 
 const TopFund = (props) => {

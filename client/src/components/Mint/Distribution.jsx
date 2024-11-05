@@ -27,7 +27,7 @@ const Distribution = ({
   useEffect(() => {
     if (selectedItems?.distribution?.presetName === constant.MY_DISTRO)
       setShowPreset(false);
-  }, []);
+  }, [selectedItems?.distribution?.presetName, setShowPreset]);
 
   useEffect(() => {
     setSlider(sliders.map((a) => a.defaultValue));
@@ -97,7 +97,8 @@ const Distribution = ({
 
   useEffect(() => {
     if (preset.length === 0) changePreset(0);
-  }, [distribution.length]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [distribution.length, preset.length]);
 
   const renderContent = () => {
     return (

@@ -1,6 +1,5 @@
 import React from "react";
 import { PieChart } from "react-minimal-pie-chart";
-import constant from "../../utils/constant";
 
 const PiePopup = ({ card, sliders, onClose }) => {
   return (

@@ -1,5 +1,5 @@
+/* eslint-disable no-unused-vars */
 import React, { useState, useEffect, useRef } from "react";
-import chevron_down_dark from "../../assets/images/chevron_down_dark.svg";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 
@@ -95,15 +95,6 @@ const Name = ({
 
   const box = useRef(null);
   useOutsideAlerter(box);
-
-  const getRare = (item) => {
-    let hasRarity = rarityList.filter((i) => {
-      return i.idOfType === item?.approvedNameId;
-    }).length;
-    if (hasRarity) {
-      return <span className="rare-name">RARE</span>;
-    }
-  };
 
   return (
     <>

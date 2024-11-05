@@ -3,6 +3,7 @@ import Slider from '@mui/material/Slider';
 
 
 class CustomSlider extends React.Component {
+    // eslint-disable-next-line no-useless-constructor
     constructor(props) {
         super(props);
     }

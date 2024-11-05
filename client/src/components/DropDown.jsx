@@ -1,5 +1,4 @@
 import React from 'react'
-import chevron_down from '../assets/images/chevron_down.svg'
 import DropdownMenuText from './DropdownMenuText'
 import DropdownMenuBox from './DropdownMenuBox'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';

@@ -1,10 +1,6 @@
 import React from "react";
-import arrow_left from "../../assets/images/arrow_left.svg";
-import arrow_right from "../../assets/images/arrow_right.svg";
-import arrow_left_grey from "../../assets/images/arrow_left_grey.svg";
-import arrow_right_grey from "../../assets/images/arrow_right_grey.svg";
-import Arrow_Left from "../Arrow_Left"
-import Arrow_Right from "../Arrow_Right"
+import ArrowLeft from "../Arrow_Left"
+import ArrowRight from "../Arrow_Right"
 
 const MintFooter = ({
   nextHover,
@@ -26,7 +22,7 @@ const MintFooter = ({
           onClick={Previous}
         >
           <div className="arrow-group left">
-            <Arrow_Left color={webPrimaryColor}/>
+            <ArrowLeft color={webPrimaryColor} />
             {backButton}
           </div>
         </button>
@@ -47,9 +43,9 @@ const MintFooter = ({
             <div className="arrow-group right">
               {nextButton}
               {!validateSelection() ? (
-                <Arrow_Right color="#cbcbcb" />
+                <ArrowRight color="#cbcbcb" />
               ) : (
-                <Arrow_Right color={webPrimaryColor} />
+                <ArrowRight color={webPrimaryColor} />
               )}
               
             </div>

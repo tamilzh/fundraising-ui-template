@@ -14,20 +14,20 @@ import { useOutletContext } from "react-router-dom";
 const Hero = (props) => {
   //const { nftData } = props; for listing top fundraiser
   const [
-    siteDetails,
-    walletAddress,
-    connectWallet,
-    isWalletConnected,
     ,
     ,
     ,
     ,
     ,
     ,
-    forceUpdate,
-    buyNftData,
-    buyLoading,
-    filterData,
+    ,
+    ,
+    ,
+    ,
+    ,
+    ,
+    ,
+    ,
     webPrimaryColor
   ] = useOutletContext();
   const [nftData, setNftData] = useState([

@@ -79,7 +79,7 @@ const Card = ({
   }, [card.address]);
 
   const showAddress = () => {
-    if (address != "") {
+    if (address !== "") {
       return (
         <div
           className="card__text card__addr tooltip"

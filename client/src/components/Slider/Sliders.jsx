@@ -221,7 +221,7 @@ function Sliders(props) {
             setPointer(p)
             props.handleChange(newSlider)
         }
-    }, [sliderValue, sliderNumber])
+    }, [sliderValue, sliderNumber, slider, pointer, sliders, props])
 
 
     useEffect(() => {
