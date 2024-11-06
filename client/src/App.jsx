@@ -231,7 +231,7 @@ const App = () => {
       });
     }
     loadContracts();
-  }, [checkBrowser, loadContracts, updateWalletAddress]);
+  }, []);
 
   useEffect(() => {
     getNftData();
