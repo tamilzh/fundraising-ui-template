@@ -172,7 +172,7 @@ const getTotalMinted = async () => {
 };
 
 const getWebsiteConfig = async () => {
-  const response = await fetch(`${BASE_API}/configuration/${process.env.REACT_APP_PUBLIC_ID}`);
+  const response = await fetch(`${BASE_API}/configuration/${process.env.REACT_APP_PROJECT_CODE || 0}`);
   const data = await response.json();
   sessionStorage.setItem("THEME", JSON.stringify(data));
   return data;
